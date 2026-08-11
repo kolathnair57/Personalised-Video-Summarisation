@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Cloned baselines — track the commit hash in env/, not the source tree
+third_party/*
+!third_party/.gitkeep
+
+# Datasets and media: never committed, never redistributed
+# (re-include the subdirs themselves, else git won't descend to find .gitkeep)
+data/**
+!data/*/
+!data/**/.gitkeep
+*.h5
+*.hdf5
+*.mp4
+*.avi
+*.webm
+*.jpg
+*.jpeg
+*.png
+
+# Teacher outputs: large, regenerable from (video, persona, model, prompt-hash)
+labels_cache/*
+!labels_cache/.gitkeep
+
+# Model checkpoints and logs
+*.pt
+*.pth
+*.ckpt
+models/
+runs/
+*.log
+
+# Results: keep the metric tables, drop the bulky intermediates
+results/pred/
+results/*.pkl
+
+# OS / editor
+.DS_Store
+*.swp
