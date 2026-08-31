@@ -1,0 +1,42 @@
+[
+  {
+    "name": "TEACHER labels (upper bound)",
+    "n": 1372,
+    "mean_divergence": 0.4810500700715854,
+    "median_divergence": 0.5,
+    "max_divergence": 1.0,
+    "frac_div_gt_0": 0.922740524781341,
+    "corr_distance_divergence": 0.022239576147497463,
+    "corr_p": 0.41044180486693455
+  },
+  {
+    "name": "Ours: persona+FiLM",
+    "n": 1372,
+    "mean_divergence": 0.14513886564746475,
+    "median_divergence": 0.1428571428571429,
+    "max_divergence": 0.7272727272727273,
+    "frac_div_gt_0": 0.5699708454810496,
+    "corr_distance_divergence": 0.08979464206182597,
+    "corr_p": 0.0008692811963684427
+  },
+  {
+    "name": "Control: generic+FiLM",
+    "n": 1372,
+    "mean_divergence": 0.1082402818464413,
+    "median_divergence": 0.0,
+    "max_divergence": 0.625,
+    "frac_div_gt_0": 0.45262390670553937,
+    "corr_distance_divergence": 0.156389263023799,
+    "corr_p": 5.76881433528737e-09
+  },
+  {
+    "name": "Ours + SHUFFLED queries",
+    "n": 1372,
+    "mean_divergence": 0.17866424961710864,
+    "median_divergence": 0.16666666666666663,
+    "max_divergence": 0.8333333333333334,
+    "frac_div_gt_0": 0.7135568513119533,
+    "corr_distance_divergence": 0.033287973745923544,
+    "corr_p": 0.21786637206350043
+  }
+]

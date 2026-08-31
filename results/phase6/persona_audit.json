@@ -1,0 +1,81 @@
+{
+  "n_personas": 128,
+  "n_domains": 16,
+  "clip_tokens": {
+    "mean": 31.9140625,
+    "max": 48,
+    "limit": 77,
+    "n_over": 0
+  },
+  "similarity": {
+    "mean": 0.3515068292617798,
+    "p95": 0.5798603296279907,
+    "max": 0.849215030670166,
+    "n_near_duplicates": 0,
+    "within_domain": {
+      "tvsum:VT": 0.6176156997680664,
+      "tvsum:VU": 0.5849434733390808,
+      "tvsum:BK": 0.5963780283927917,
+      "tvsum:BT": 0.5693848729133606,
+      "tvsum:DS": 0.5151790380477905,
+      "tvsum:GA": 0.5941123366355896,
+      "tvsum:MS": 0.5467409491539001,
+      "tvsum:PK": 0.5261676907539368,
+      "tvsum:PR": 0.5197463035583496,
+      "tvsum:FM": 0.5612035393714905,
+      "summe:action_sports": 0.4428269565105438,
+      "summe:aviation": 0.541405200958252,
+      "summe:vehicles": 0.5650551319122314,
+      "summe:landmarks_travel": 0.44943681359291077,
+      "summe:everyday_life": 0.37572240829467773,
+      "summe:animals_nature": 0.3896304666996002
+    }
+  },
+  "coverage": {
+    "age_band": {
+      "50-64": 22,
+      "65+": 26,
+      "18-24": 32,
+      "25-34": 26,
+      "35-49": 22
+    },
+    "expertise": {
+      "casual interest": 32,
+      "complete novice": 32,
+      "domain professional": 32,
+      "hobbyist": 32
+    },
+    "attention_budget": {
+      "15s": 32,
+      "2min": 32,
+      "1min": 32,
+      "30s": 32
+    },
+    "watching_context": {
+      "on a phone during a commute": 26,
+      "relaxing at home": 28,
+      "deciding whether to watch the full video": 28,
+      "researching before doing it themselves": 26,
+      "looking for one specific moment": 20
+    }
+  },
+  "bias": {
+    "pronouns": {
+      "he": 58,
+      "him": 2,
+      "his": 40,
+      "she": 62,
+      "her": 47,
+      "they": 77,
+      "them": 8
+    },
+    "n_distinct_occupations": 101,
+    "age_bands": {
+      "50-64": 22,
+      "65+": 26,
+      "18-24": 32,
+      "25-34": 26,
+      "35-49": 22
+    }
+  }
+}

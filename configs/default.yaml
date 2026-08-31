@@ -1,0 +1,45 @@
+# Final configuration for the personalised summariser (Phase 9/11 outcome).
+# Reproduces models/p9_persona_film.
+#
+#   python src/train_persona.py --dataset tvsum --labels persona \
+#       --qcond film --qcond-lr-mult 100 --loss mse+rank \
+#       --lambda-score 10 --lambda-rank 10 --lr 5e-5 --max-epoch 20
+
+dataset: tvsum
+labels: persona            # persona | generic_paired | generic
+
+model:
+  base_model: attention    # NOT gcn: that would pull in torch-geometric
+  num_feature: 512         # CLIP-512. MUST be 512 for clip_h5/persona_h5
+  num_hidden: 128
+  num_head: 8
+
+conditioning:
+  qcond: film              # film | concat | none
+  # WHY film, not the runbook's concat default:
+  # concat computes W_f*f + W_q*q + b. The query q is CONSTANT across a video's frames,
+  # so W_q*q is one fixed vector added to every frame -- it translates the sequence
+  # without reordering it, and rank metrics see only relative order. Measured: concat
+  # changes the summary for 0.4% of persona pairs, FiLM for 27.4%.
+  qcond_lr_mult: 100       # the head is identity-initialised (weights at exactly 0), so
+                           # it must travel further than any other parameter; with a
+                           # shared lr and early stopping it never leaves zero.
+
+loss:
+  kind: mse+rank           # none | mse | rank | mse+rank
+  lambda_score: 10         # DSNet's detection losses run ~2.5 vs mse ~0.11, rank ~0.66;
+  lambda_rank: 10          # at lambda=1 the objectives matching the primary metric are
+                           # drowned out. 10x gave +37% relative rho.
+
+optim:
+  lr: 5.0e-5
+  weight_decay: 1.0e-5
+  max_epoch: 20
+  seed: 12345
+
+eval:
+  nms_thresh: 0.4
+  metric: avg              # Otani: avg for tvsum, max for summe
+  # Model selection is Spearman vs held-out PERSONA labels, never F1 vs user_summary:
+  # user_summary is the generic human annotation, identical across a video's personas,
+  # so selecting on it picks the epoch that best IGNORES the persona.

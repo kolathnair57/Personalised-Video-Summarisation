@@ -1,0 +1,25 @@
+# Phase 11 ablation grid. Each entry varies exactly ONE axis from configs/default.yaml.
+# Results: results/phase11/phase11-notes.md
+
+axis_1_query_mechanism:
+  # rho = Spearman vs held-out persona labels; sens = % persona pairs whose summary differs
+  - {qcond: film,   rho: 0.2237, pairs_differing: 27.4, note: "default"}
+  - {qcond: concat, rho: 0.2036, pairs_differing:  0.4, note: "== no query; cannot personalise"}
+  - {qcond: none,   rho: 0.2025, pairs_differing: null, note: "no query at all"}
+
+axis_2_loss:
+  - {loss: mse+rank, rho: 0.2237, pairs_differing: 27.4, note: "default; most accurate"}
+  - {loss: rank,     rho: 0.2209, pairs_differing: 16.6}
+  - {loss: mse,      rho: 0.2117, pairs_differing: 32.2, note: "most persona-sensitive"}
+  - {loss: none,     rho: 0.1648, pairs_differing: 10.6, note: "DSNet losses only"}
+
+axis_3_teacher_self_consistency:
+  # measured on LABEL quality (Otani tau vs 20 human annotators), no training needed
+  - {k: 1, tau_vs_human: 0.0823}
+  - {k: 3, tau_vs_human: 0.0802, note: "paired p=0.382 -- no benefit at 3x the cost"}
+
+not_run:
+  teacher_32b:   "FP8 impossible on sm_86 (RTX 3090); needs a 4-bit AWQ build"
+  modality_asr:  "no transcript pipeline in this project"
+  cross_attention: "not implemented"
+  loss_kl:       "not implemented"

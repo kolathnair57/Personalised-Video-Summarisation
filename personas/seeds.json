@@ -1,0 +1,391 @@
+{
+  "note": "Domain-conditioned persona seeds (gap G2). Personas are generated per domain and paired only with videos of that domain -- Phase 5 showed mismatched personas produce constant, useless score vectors.",
+  "global_attributes": {
+    "age_band": [
+      "18-24",
+      "25-34",
+      "35-49",
+      "50-64",
+      "65+"
+    ],
+    "attention_budget": [
+      "15s",
+      "30s",
+      "1min",
+      "2min"
+    ],
+    "expertise": [
+      "complete novice",
+      "casual interest",
+      "hobbyist",
+      "domain professional"
+    ],
+    "watching_context": [
+      "deciding whether to watch the full video",
+      "on a phone during a commute",
+      "researching before doing it themselves",
+      "relaxing at home",
+      "looking for one specific moment"
+    ],
+    "gender_presentation": [
+      "a woman",
+      "a man",
+      "a non-binary person"
+    ]
+  },
+  "domains": {
+    "tvsum:VT": {
+      "dataset": "tvsum",
+      "label": "vehicle tyre repair (instructional)",
+      "viewing_goal": [
+        "follow the exact repair steps",
+        "decide if I can do it myself",
+        "check which tools are needed",
+        "quick overview before starting"
+      ],
+      "interest_focus": [
+        "hands working on the wheel",
+        "tools and equipment",
+        "the finished result",
+        "safety warnings",
+        "the presenter explaining"
+      ]
+    },
+    "tvsum:VU": {
+      "dataset": "tvsum",
+      "label": "vehicles stuck, unusual or in trouble",
+      "viewing_goal": [
+        "see the dramatic moment",
+        "understand what went wrong",
+        "learn the recovery technique",
+        "judge the vehicle's capability"
+      ],
+      "interest_focus": [
+        "the moment of failure",
+        "recovery attempts",
+        "the terrain",
+        "the vehicle itself",
+        "people reacting"
+      ]
+    },
+    "tvsum:BK": {
+      "dataset": "tvsum",
+      "label": "beekeeping and wasp removal",
+      "viewing_goal": [
+        "learn hive management",
+        "see the insects up close",
+        "assess the danger",
+        "follow the removal procedure"
+      ],
+      "interest_focus": [
+        "close-ups of bees",
+        "hive structure",
+        "protective equipment",
+        "the beekeeper's technique",
+        "honey and combs"
+      ]
+    },
+    "tvsum:BT": {
+      "dataset": "tvsum",
+      "label": "bike and motorcycle tricks (how-to and stunt shows)",
+      "viewing_goal": [
+        "learn to perform the trick",
+        "watch the best stunts",
+        "check the bike setup",
+        "see crashes and fails"
+      ],
+      "interest_focus": [
+        "the trick being landed",
+        "body position and technique",
+        "the bike and its parts",
+        "crowd reaction",
+        "the instructor talking"
+      ]
+    },
+    "tvsum:DS": {
+      "dataset": "tvsum",
+      "label": "dog shows and pet stories",
+      "viewing_goal": [
+        "see the dogs",
+        "follow the competition result",
+        "understand judging criteria",
+        "follow one animal's story"
+      ],
+      "interest_focus": [
+        "individual dogs",
+        "handlers and judges",
+        "the crowd and venue",
+        "close-ups of animals",
+        "the award moment"
+      ]
+    },
+    "tvsum:GA": {
+      "dataset": "tvsum",
+      "label": "grooming an animal",
+      "viewing_goal": [
+        "learn the grooming technique",
+        "decide on a service for my pet",
+        "see the before/after",
+        "check the tools used"
+      ],
+      "interest_focus": [
+        "the groomer's hands",
+        "the animal's reaction",
+        "tools and clippers",
+        "the finished look",
+        "the salon environment"
+      ]
+    },
+    "tvsum:MS": {
+      "dataset": "tvsum",
+      "label": "making a sandwich (food preparation)",
+      "viewing_goal": [
+        "replicate the recipe exactly",
+        "decide whether to order it",
+        "see the ingredients",
+        "quick overview of the dish"
+      ],
+      "interest_focus": [
+        "ingredients being added",
+        "hands preparing food",
+        "the finished dish",
+        "the cook talking",
+        "the restaurant or kitchen"
+      ]
+    },
+    "tvsum:PK": {
+      "dataset": "tvsum",
+      "label": "parkour and free running",
+      "viewing_goal": [
+        "study the movement technique",
+        "watch the most impressive jumps",
+        "see the locations used",
+        "follow one athlete"
+      ],
+      "interest_focus": [
+        "the jump or vault itself",
+        "landings and falls",
+        "the urban setting",
+        "athletes talking",
+        "group interaction"
+      ]
+    },
+    "tvsum:PR": {
+      "dataset": "tvsum",
+      "label": "parades and street processions",
+      "viewing_goal": [
+        "see the whole spectacle",
+        "spot a specific group or float",
+        "sense the atmosphere",
+        "catch the main highlight"
+      ],
+      "interest_focus": [
+        "floats and costumes",
+        "performers and dancers",
+        "the crowd",
+        "the street and surroundings",
+        "close-ups of participants"
+      ]
+    },
+    "tvsum:FM": {
+      "dataset": "tvsum",
+      "label": "flash mobs and staged public performances",
+      "viewing_goal": [
+        "watch the performance",
+        "see the crowd's reaction",
+        "understand the message or cause",
+        "catch the surprise moment"
+      ],
+      "interest_focus": [
+        "the dancers",
+        "the moment it starts",
+        "bystanders reacting",
+        "banners and signage",
+        "the full group formation"
+      ]
+    },
+    "summe:action_sports": {
+      "dataset": "summe",
+      "label": "extreme and action sports",
+      "viewing_goal": [
+        "see the peak action moment",
+        "study the technique",
+        "sense the whole experience",
+        "watch for crashes or fails"
+      ],
+      "interest_focus": [
+        "the athlete in motion",
+        "the landing or impact",
+        "the scenery",
+        "equipment",
+        "people reacting"
+      ]
+    },
+    "summe:aviation": {
+      "dataset": "summe",
+      "label": "aviation and flight",
+      "viewing_goal": [
+        "watch the landing or takeoff",
+        "see the cockpit procedure",
+        "spot the aircraft type",
+        "enjoy the views"
+      ],
+      "interest_focus": [
+        "the aircraft",
+        "the cockpit and instruments",
+        "the runway",
+        "the view from the window",
+        "ground crew and spectators"
+      ]
+    },
+    "summe:vehicles": {
+      "dataset": "summe",
+      "label": "vehicles and machinery in unusual situations",
+      "viewing_goal": [
+        "see the risky manoeuvre",
+        "understand what happened",
+        "judge the machine's capability",
+        "catch the dramatic moment"
+      ],
+      "interest_focus": [
+        "the vehicle",
+        "the obstacle or terrain",
+        "the critical moment",
+        "bystanders",
+        "the aftermath"
+      ]
+    },
+    "summe:landmarks_travel": {
+      "dataset": "summe",
+      "label": "landmarks and travel",
+      "viewing_goal": [
+        "see the landmark itself",
+        "plan my own visit",
+        "sense the atmosphere",
+        "see architectural detail"
+      ],
+      "interest_focus": [
+        "the monument",
+        "architectural close-ups",
+        "the crowd",
+        "the surrounding city",
+        "people in the frame"
+      ]
+    },
+    "summe:everyday_life": {
+      "dataset": "summe",
+      "label": "everyday life and family moments",
+      "viewing_goal": [
+        "relive the moment",
+        "see the people I know",
+        "follow what is being made",
+        "catch the funny bit"
+      ],
+      "interest_focus": [
+        "faces and expressions",
+        "the activity itself",
+        "the result",
+        "the setting",
+        "spontaneous moments"
+      ]
+    },
+    "summe:animals_nature": {
+      "dataset": "summe",
+      "label": "animals and nature",
+      "viewing_goal": [
+        "see the animals",
+        "follow the rescue or event",
+        "understand what is happening",
+        "see the environment"
+      ],
+      "interest_focus": [
+        "the animals",
+        "people helping",
+        "the water or landscape",
+        "close-ups",
+        "the outcome"
+      ]
+    }
+  },
+  "video_domain": {
+    "tvsum": {
+      "video_1": "tvsum:VT",
+      "video_10": "tvsum:VU",
+      "video_11": "tvsum:GA",
+      "video_12": "tvsum:GA",
+      "video_13": "tvsum:GA",
+      "video_14": "tvsum:GA",
+      "video_15": "tvsum:GA",
+      "video_17": "tvsum:MS",
+      "video_18": "tvsum:MS",
+      "video_19": "tvsum:MS",
+      "video_2": "tvsum:VT",
+      "video_20": "tvsum:MS",
+      "video_21": "tvsum:PK",
+      "video_22": "tvsum:PK",
+      "video_23": "tvsum:PK",
+      "video_24": "tvsum:PK",
+      "video_25": "tvsum:PK",
+      "video_26": "tvsum:PR",
+      "video_27": "tvsum:PR",
+      "video_28": "tvsum:PR",
+      "video_29": "tvsum:PR",
+      "video_3": "tvsum:VT",
+      "video_30": "tvsum:PR",
+      "video_31": "tvsum:FM",
+      "video_32": "tvsum:FM",
+      "video_33": "tvsum:FM",
+      "video_34": "tvsum:FM",
+      "video_35": "tvsum:FM",
+      "video_36": "tvsum:BK",
+      "video_37": "tvsum:BK",
+      "video_38": "tvsum:BK",
+      "video_4": "tvsum:VT",
+      "video_40": "tvsum:BK",
+      "video_41": "tvsum:BT",
+      "video_42": "tvsum:BT",
+      "video_43": "tvsum:BT",
+      "video_44": "tvsum:BT",
+      "video_45": "tvsum:BT",
+      "video_46": "tvsum:DS",
+      "video_47": "tvsum:DS",
+      "video_48": "tvsum:DS",
+      "video_49": "tvsum:DS",
+      "video_5": "tvsum:VT",
+      "video_50": "tvsum:DS",
+      "video_6": "tvsum:VU",
+      "video_7": "tvsum:VU",
+      "video_8": "tvsum:VU",
+      "video_9": "tvsum:VU",
+      "video_16": "tvsum:MS",
+      "video_39": "tvsum:BK"
+    },
+    "summe": {
+      "video_1": "summe:aviation",
+      "video_10": "summe:vehicles",
+      "video_11": "summe:everyday_life",
+      "video_12": "summe:action_sports",
+      "video_13": "summe:everyday_life",
+      "video_14": "summe:landmarks_travel",
+      "video_15": "summe:action_sports",
+      "video_16": "summe:action_sports",
+      "video_17": "summe:animals_nature",
+      "video_18": "summe:action_sports",
+      "video_19": "summe:aviation",
+      "video_2": "summe:action_sports",
+      "video_20": "summe:landmarks_travel",
+      "video_21": "summe:aviation",
+      "video_22": "summe:action_sports",
+      "video_23": "summe:vehicles",
+      "video_24": "summe:action_sports",
+      "video_25": "summe:action_sports",
+      "video_3": "summe:action_sports",
+      "video_4": "summe:action_sports",
+      "video_5": "summe:vehicles",
+      "video_6": "summe:vehicles",
+      "video_7": "summe:aviation",
+      "video_8": "summe:everyday_life",
+      "video_9": "summe:landmarks_travel"
+    }
+  }
+}

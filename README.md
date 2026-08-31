@@ -1,125 +1,128 @@
 # Personalised Video Summarisation
 
-Persona-conditioned video summarisation: a VLM teacher (Qwen3-VL, served locally
-via vLLM) produces persona-conditioned importance scores, which supervise a
-query-conditioned DSNet student.
+Query-conditioned video summarisation trained on **synthetic persona supervision**: a
+vision-language teacher (Qwen3-VL-8B) rescores every shot of a video from a generated
+viewer's point of view, those scores replace `gtscore` in the standard eccv16 HDF5 file,
+and a query-conditioned DSNet is trained on the result.
 
-**The core idea:** DSNet never reads raw video at train time — it reads an
-eccv16-schema HDF5 file in which `gtscore` is the supervision signal. The method
-is therefore a *data transformation*: for each generated persona, write a new h5
-where `gtscore` is replaced by the teacher's persona-conditioned scores and a
-`query` string is attached. KTS, knapsack selection, and the training loop are
-reused unchanged.
+Full build log: **`results/report/PVS_project_log.pdf`** (45 pages).
 
-## Stack
+## Status
 
-| Role | Component |
-|------|-----------|
-| Student | DSNet (anchor-free variant is the one extended) |
-| Baselines | PGL-SUM, CLIP-It, random-summary floor, generic-label DSNet |
-| Frame encoder | CLIP ViT-B-32 (`laion2b_s34b_b79k`), 512-d |
-| Teacher | Qwen3-VL-8B-Instruct (32B-FP8 for ablations) via vLLM |
-| Data | TVSum, SumMe, QFVS/UTE |
-| Compute | HEX cluster |
+Phases 0-11 and 13 complete. Not run: QFVS evaluation (10.3), user study (11.3).
+Phase 9 trained on TVSum only.
 
-## eccv16 h5 schema
+## Quick start
 
+```bash
+source env/activate-train.sh     # DSNet / CLIP / evaluation
+source env/activate-vllm.sh      # vLLM teacher (only needed for Phases 6-7)
 ```
-<video_key>/
-  features        (n_steps, D)            # subsampled frame features
-  gtscore         (n_steps,)              # <-- the supervision; this is what we swap
-  change_points   (num_segments, 2)       # shot boundaries (KTS)
-  n_frame_per_seg (num_segments,)
-  picks           (n_steps,)              # which original frames were kept
-  n_frames        scalar
-  n_steps         scalar
-  user_summary    (num_users, n_frames)   # test time only
-  gtsummary       (n_steps,)
-  video_name      (SumMe only)
+
+Summarise any video for any free-text preference:
+
+```bash
+python src/infer_personalised.py \
+    --source video.mp4 \
+    --query  "close-ups of hands working with tools, and the finished result" \
+    --save   summary.mp4
 ```
+
+The query is arbitrary text -- CLIP maps it into the same space as the frame features, so
+it is not limited to the 128 generated personas.
+
+## Headline results (TVSum, 5 splits)
+
+Rank correlation is the primary metric. A **random-score** model reaches 56.42 F1 against
+published DSNet's 62.09, so F1 has almost no discriminative range on this benchmark.
+
+| Method | tau | rho | F1 |
+|---|---|---|---|
+| Human ceiling (leave-one-out) | 0.3139 | 0.3957 | - |
+| Random floor | 0.0009 | 0.0013 | 56.42 |
+| DSNet AF (GoogLeNet-1024) | 0.0898 | 0.1177 | 61.16 |
+| DSNet AF (CLIP-512) | 0.0826 | 0.1079 | 61.29 |
+| **Ours (persona + FiLM)** | **0.1581** | **0.2059** | - |
+| Control (generic labels + FiLM) | 0.2701 | 0.3488 | - |
+
+Note the control "wins" because the reference is the **generic** human annotation: a model
+that deviates per persona is scored down for the behaviour it was built to have. That is
+why the counterfactual test below matters, and why QFVS is the outstanding experiment.
+
+**Persona sensitivity** -- same video, different persona, does the summary change?
+
+| Model | mean corr. between personas | % pairs differing |
+|---|---|---|
+| Ours (persona labels) | +0.9080 | **27.4%** |
+| Control (generic labels) | +0.9829 | 1.0% |
+
+Persona supervision produces a 27x more persona-sensitive model while giving no gain in
+aggregate accuracy.
+
+## Four findings worth knowing
+
+1. **Concat conditioning cannot personalise.** Its query term is constant across frames,
+   so it translates the feature sequence without reordering it. The runbook's default is
+   concat; FiLM should be used (0.4% vs 27.4% of pairs differing).
+2. **An auxiliary frame-level ranking loss is worth ~3x tau** over stock DSNet training,
+   whose detection losses optimise a binary 15%-budget target only loosely related to
+   ordering.
+3. **The teacher personalises but not *semantically*.** Its labels diverge (0.48, 92% of
+   pairs) yet the divergence does not track persona semantic distance (r=+0.022, p=0.41).
+   A student cannot learn a relationship its labels do not contain. This is the central
+   limitation and the clearest direction for future work.
+4. **Teacher self-consistency (k=3) is not worth 3x the cost** (paired p=0.382).
 
 ## Layout
 
 ```
-env/            environment specs / lockfiles
-third_party/    cloned baselines (DSNet, PGL-SUM, CLIP-It) — not vendored into git
-data/
-  base_h5/      stock GoogLeNet h5 (tvsum, summe)
-  clip_h5/      re-extracted CLIP-feature h5
-  persona_h5/   generated persona datasets (the deliverable data)
-  qfvs/         QFVS/UTE for personalisation eval
-personas/       seed library + generated persona pools (JSON)
-labels_cache/   cached Qwen3-VL outputs (keyed, never recomputed)
-src/            pipeline scripts (see below)
-configs/        yaml experiment configs
-results/        metric tables, logs
+src/                 all project code (17 scripts, see below)
+configs/             default.yaml (final config) + ablations.yaml (Phase 11 grid)
+personas/            seeds.json (16 domains) + pool.json (128 personas)
+data/                base_h5, clip_h5, persona_h5, video_map.json   [gitignored]
+labels_cache/        6,576 cached teacher calls, keyed and never recomputed [gitignored]
+models/              trained checkpoints [gitignored]
+results/             per-phase notes, metrics, main_table.csv, the PDF log
+third_party/DSNet    cloned baseline + a 32-line compatibility/query patch [gitignored]
+third_party/PGL-SUM  cloned baseline [gitignored]
+env/                 lockfiles, constraints, activation scripts, environment notes
 ```
-
-## Two environments (do not merge them)
-
-vLLM pins aggressive `torch` / `transformers` versions that conflict with the
-DSNet/CLIP training environment.
-
-- `~/envs/pvs-train` — DSNet, CLIP, evaluation → `env/requirements-train.txt`
-- `~/envs/pvs-vllm` — vLLM, Qwen3-VL serving → `env/requirements-vllm.txt`
 
 ## Pipeline
 
-```bash
-# serve the teacher (pvs-vllm env)
-export VLLM_WORKER_MULTIPROC_METHOD=spawn
-vllm serve Qwen/Qwen3-VL-8B-Instruct --port 8000 --limit-mm-per-prompt image=16
+| Script | Phase | Purpose |
+|---|---|---|
+| `map_videos.py` | 4 | h5 key -> mp4 mapping, **verified** (mismapping is silent) |
+| `extract_clip.py` | 4 | GoogLeNet-1024 -> CLIP-512 features |
+| `verify_clip_h5.py` | 4 | schema + rank test (75/75 videos matched themselves) |
+| `build_seeds.py` | 6 | domain-conditioned seed library |
+| `gen_personas.py` | 6 | 128 personas via the teacher |
+| `audit_personas.py` | 6 | diversity + bias audit |
+| `extract_shot_frames.py` | 7 | one frame per shot, cached once per video |
+| `score_teacher.py` | 7 | persona-conditioned shot scoring, overlap-aligned |
+| `build_persona_h5.py` | 7 | broadcast scores -> persona datasets |
+| `query_head.py` | 8 | FiLM/concat conditioner + CLIP text embeddings |
+| `train_persona.py` | 9 | trains the student |
+| `eval_rank.py` | 10 | Otani-protocol tau/rho |
+| `eval_pglsum.py` | 3 | PGL-SUM scores through DSNet's harness |
+| `random_baseline.py` | 3 | the random floor |
+| `persona_sensitivity.py` | 11 | counterfactual personalisation test |
+| `infer_personalised.py` | 13 | raw video + text -> summary video |
+| `md2pdf.py` | - | builds the PDF log |
 
-# generate persona labels (cached, resumable)
-python src/gen_personas.py     --seeds personas/seeds.json --out personas/pool.json
-python src/score_teacher.py    --pool personas/pool.json --videos data/clip_h5 --out labels_cache
-python src/build_persona_h5.py --base data/clip_h5 --scores labels_cache --out data/persona_h5
+## Reproducibility
 
-# train + evaluate the student (pvs-train env)
-python src/train.py    --data data/persona_h5 --qcond concat --loss mse+rank
-python src/eval_rank.py --pred results/pred --data data/clip_h5
-```
+Every teacher call is cached under a key covering (video, persona, model, prompt version,
+chunk span, repeat), so re-running Phase 7 costs nothing. Environments are pinned in
+`env/requirements-*.txt` with `constraints-*.txt` to stop a later install silently
+swapping torch for a build compiled against the wrong CUDA.
 
-## Scripts
+Hardware note: this ran on 3x RTX 3090 (24 GB, sm_86), not the HEX A100/H100s the runbook
+assumes. FP8 is unavailable, so the 32B teacher is out of reach; vLLM is pinned to 0.19.1
+because 0.20.0+ requires CUDA 13 (driver >= 580; this machine has 555). See
+`env/environment-notes.md`.
 
-| File | Phase | Purpose |
-|------|-------|---------|
-| `src/extract_clip.py` | 4 | Re-extract CLIP features into the eccv16 schema |
-| `src/serve_notes.md` | 5 | vLLM serving commands + run log |
-| `src/gen_personas.py` | 6 | Expand domain seeds into a persona pool |
-| `src/score_teacher.py` | 7.1 | Per-shot persona importances from Qwen3-VL |
-| `src/build_persona_h5.py` | 7.2 | Swap `gtscore`, attach `query` |
-| `src/query_head.py` | 8 | Query-conditioning for the DSNet head |
-| `src/eval_rank.py` | 10.1 | Kendall tau / Spearman rho (Otani protocol) |
-| `src/persona_sensitivity.py` | 11.2 | Counterfactual persona-divergence test |
+## Data
 
-## Build status
-
-- [x] **Phase 0** — repository layout, version control
-- [ ] **Phase 1** — environments on HEX
-- [ ] **Phase 2** — replicate DSNet unchanged (baseline #1)
-- [ ] **Phase 3** — PGL-SUM, CLIP-It, sanity baselines
-- [ ] **Phase 4** — re-extract CLIP features
-- [ ] **Phase 5** — serve Qwen3-VL via vLLM
-- [ ] **Phase 6** — generate personas
-- [ ] **Phase 7** — teacher scoring → persona h5 files
-- [ ] **Phase 8** — query-conditioning in the DSNet head
-- [ ] **Phase 9** — train the student on synthetic labels
-- [ ] **Phase 10** — evaluation (rank correlation primary)
-- [ ] **Phase 11** — ablations + persona-sensitivity test
-- [ ] **Phase 12** — reproducibility hygiene (throughout)
-
-Critical path: everything downstream depends on two artefacts being right — the
-**CLIP-feature h5 files** and the **persona h5 files with swapped `gtscore` +
-`query`**.
-
-## Reproducibility rules
-
-- Version everything that generates data: seed library, persona pool, prompts,
-  persona h5 files. Every experiment regenerable from a commit hash.
-- Pin versions: both requirements files, model IDs, and vLLM sampling params
-  recorded with each run.
-- `labels_cache/` is sacred — keyed by (video, persona, model, prompt-hash), so a
-  pre-emption or re-run costs nothing.
-- Do not redistribute videos. Release code + synthetic labels only; TVSum,
-  SumMe, and UTE stay under their own terms.
+TVSum and SumMe are downloaded from their original sources and **not redistributed**.
+Raw videos live outside the repo on local scratch.
