@@ -1,0 +1,15 @@
+dataset,method,tau,rho,f1,n,note
+tvsum,Human ceiling (leave-one-out),0.3139,0.3957,,-,
+tvsum,Random floor,0.0009,0.0013,56.42,50,
+tvsum,Generic human gtscore (reference),0.3782,0.4732,,50,
+tvsum,DSNet AF (GoogLeNet-1024),0.0898,0.1177,,500,
+tvsum,DSNet AF (CLIP-512),0.0826,0.1079,61.29,500,
+tvsum,Ours: persona+FiLM,0.1581,0.2059,,1965,
+tvsum,Control: generic+FiLM,0.2701,0.3488,,1965,
+summe,Human ceiling (leave-one-out),0.2966,0.3299,,-,
+summe,Random floor,-0.0029,-0.0039,41.49,25,
+summe,Generic human gtscore (reference),1.0,1.0,,25,CIRCULAR: SumMe gtscore is derived from user_summary
+summe,DSNet AF (GoogLeNet-1024),0.1002,0.1318,,250,
+summe,DSNet AF (CLIP-512),0.107,0.1415,50.64,250,
+summe,Ours: persona+FiLM,0.0256,0.0329,,780,"TVSum-trained, zero-shot transfer"
+summe,Control: generic+FiLM,0.092,0.1236,,780,"TVSum-trained, zero-shot transfer"

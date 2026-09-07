@@ -43,3 +43,4 @@ results/*.pkl
 # OS / editor
 .DS_Store
 *.swp
+demo_out/

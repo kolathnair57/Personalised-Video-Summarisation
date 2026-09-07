@@ -1,0 +1,13 @@
+method,dataset,features,f1_mean,f1_std,published,delta,splits,date,note
+Random floor,summe,n/a (noise scores),41.49,1.33,,,39.28|42.21|41.49|42.75|41.72,2026-08-11,5 seeds; same KTS->knapsack + DSNet F1 harness
+DSNet (anchor-based),summe,GoogLeNet-1024,47.23,2.95,50.19,-2.96,47.52|45.78|48.49|51.12|43.24,2026-08-11,"Phase 2 reproduction, local reference baseline"
+DSNet (anchor-free),summe,GoogLeNet-1024,51.31,3.73,51.18,0.13,54.55|47.44|49.13|55.99|49.42,2026-08-11,"Phase 2 reproduction, local reference baseline"
+PGL-SUM,summe,GoogLeNet-1024,48.2,6.8,57.1,-8.9,46.46|52.13|43.66|57.84|40.91,2026-08-11,DSNet splits + DSNet harness; max-epoch selection
+Random floor,tvsum,n/a (noise scores),56.42,0.9,,,56.09|57.48|56.06|57.18|55.28,2026-08-11,5 seeds; same KTS->knapsack + DSNet F1 harness
+DSNet (anchor-based),tvsum,GoogLeNet-1024,62.09,2.01,62.05,0.04,62.67|58.75|64.13|62.12|62.76,2026-08-11,"Phase 2 reproduction, local reference baseline"
+DSNet (anchor-free),tvsum,GoogLeNet-1024,61.16,2.71,61.86,-0.7,61.69|56.43|63.28|61.96|62.46,2026-08-11,"Phase 2 reproduction, local reference baseline"
+PGL-SUM,tvsum,GoogLeNet-1024,62.23,2.19,61.0,1.23,62.02|58.96|64.34|61.67|64.14,2026-08-11,DSNet splits + DSNet harness; max-epoch selection
+DSNet (anchor-based),tvsum,CLIP-512,61.16,3.01,,,60.30|57.69|65.99|60.70|61.13,2026-08-12,Phase 4 CLIP features; GoogLeNet was 62.09 (-0.93)
+DSNet (anchor-based),summe,CLIP-512,49.86,4.2,,,49.49|50.69|52.48|53.70|42.93,2026-08-12,Phase 4 CLIP features; GoogLeNet was 47.23 (+2.63)
+DSNet (anchor-free),tvsum,CLIP-512,61.29,2.72,,,62.03|57.15|64.51|62.23|60.53,2026-08-12,Phase 4 CLIP features; GoogLeNet was 61.16 (+0.13)
+DSNet (anchor-free),summe,CLIP-512,50.64,5.22,,,53.80|43.11|50.48|56.92|48.91,2026-08-12,Phase 4 CLIP features; GoogLeNet was 51.31 (-0.67)

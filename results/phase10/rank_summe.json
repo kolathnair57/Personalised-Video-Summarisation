@@ -1,0 +1,44 @@
+[
+  {
+    "method": "Human ceiling (leave-one-out)",
+    "tau": 0.2965532597361223,
+    "rho": 0.32991118589070073,
+    "n": "-"
+  },
+  {
+    "method": "Random floor",
+    "tau": -0.002903267594701288,
+    "rho": -0.0038765791032105146,
+    "n": "25"
+  },
+  {
+    "method": "Generic human gtscore (reference)",
+    "tau": 1.0,
+    "rho": 1.0,
+    "n": "25"
+  },
+  {
+    "method": "DSNet AF (GoogLeNet-1024)",
+    "tau": 0.10024383052156573,
+    "rho": 0.13179307128125523,
+    "n": "250"
+  },
+  {
+    "method": "DSNet AF (CLIP-512)",
+    "tau": 0.1069955102004437,
+    "rho": 0.14148904971740686,
+    "n": "250"
+  },
+  {
+    "method": "Ours: persona+FiLM",
+    "tau": 0.025555323349985247,
+    "rho": 0.03287152648246091,
+    "n": "780"
+  },
+  {
+    "method": "Control: generic+FiLM",
+    "tau": 0.09199700016344911,
+    "rho": 0.1236238802166038,
+    "n": "780"
+  }
+]

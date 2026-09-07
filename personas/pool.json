@@ -1,0 +1,2210 @@
+{
+  "tvsum:VT": [
+    {
+      "biography": "Marta, 58, drives a 2005 SUV and lives in a suburban neighborhood. She\u2019s curious about DIY fixes but avoids complex tools\u2014she just wants clear, step-by-step guidance from someone who explains things plainly.",
+      "occupation": "retired school secretary",
+      "preference_query": "A woman in a mechanic\u2019s apron holding a tyre iron, clearly pointing to each step while talking to the camera in a well-lit garage.",
+      "persona_id": "tvsum-vt-00",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "follow the exact repair steps",
+        "interest_focus": "the presenter explaining"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired railway engineer, spends afternoons in his garage tinkering with old cars. He\u2019s never changed a tyre before but wants to fix his grandson\u2019s bike wheel\u2014just to see if he can do it himself.",
+      "occupation": "Retired railway engineer",
+      "preference_query": "Show me the flat tyre being repaired, the patched rim, and the wheel finally mounted back on the bike\u2014clearly, step by step, in under two minutes.",
+      "persona_id": "tvsum-vt-01",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "quick overview before starting",
+        "interest_focus": "the finished result"
+      }
+    },
+    {
+      "biography": "Zara, a 21-year-old mobile mechanic apprentice, repairs bikes and small cars in a garage near campus. They\u2019re learning to diagnose tire issues quickly and often rely on visual guides to verify tool compatibility before starting work.",
+      "occupation": "mobile mechanic apprentice",
+      "preference_query": "Show close-up of hands using lug wrench and impact driver on a wheel hub, with clear view of socket sizes and tool placement on the ground.",
+      "persona_id": "tvsum-vt-02",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "check which tools are needed",
+        "interest_focus": "hands working on the wheel"
+      }
+    },
+    {
+      "biography": "Lena is a 28-year-old urban cyclist and freelance graphic designer who recently bought a used bike and wants to fix her flat tyre without calling a mechanic. She\u2019s cautious about DIY projects and prioritizes safety\u2014she\u2019s researched online but still wants to see step-by-step proof that the repair won\u2019t cause further damage or risk.",
+      "occupation": "freelance graphic designer",
+      "preference_query": "Show me close-ups of tyre tread, the valve stem, and hands using a patch kit, with clear warnings about pinch flats or improper sealant application.",
+      "persona_id": "tvsum-vt-03",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "decide if I can do it myself",
+        "interest_focus": "safety warnings"
+      }
+    },
+    {
+      "biography": "Rafael, a 42-year-old auto mechanic in rural Colorado, fixes his own farm truck and helps neighbors with tire issues. He\u2019s not a pro, but knows enough to avoid costly mistakes \u2014 and values seeing tools in action, not just theory.",
+      "occupation": "Self-employed farm truck mechanic",
+      "preference_query": "Show close-up of the impact wrench removing the lug nuts from a tire on a workbench, then the air chuck being attached to the compressor.",
+      "persona_id": "tvsum-vt-04",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "follow the exact repair steps",
+        "interest_focus": "tools and equipment"
+      }
+    },
+    {
+      "biography": "Zara, a 57-year-old retired school bus driver, is learning to fix her own car after a flat tyre stranded her on a rainy Tuesday. She\u2019s never touched a wrench and relies on short, clear videos during her daily bus commute to stay calm and prepared.",
+      "occupation": "Retired school bus driver",
+      "preference_query": "Show the presenter\u2019s hands holding a tyre iron and pointing to the valve stem while explaining how to remove the cap.",
+      "persona_id": "tvsum-vt-05",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "quick overview before starting",
+        "interest_focus": "the presenter explaining"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired aeronautical engineer, now volunteers at a community auto workshop. She\u2019s quick with tools but prefers watching tutorials to refresh her memory before tackling tricky repairs.",
+      "occupation": "Retired engineer / volunteer auto mechanic",
+      "preference_query": "Show clear close-ups of the finished repaired tyre with all tools laid out beside it, labeled by name and use.",
+      "persona_id": "tvsum-vt-06",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "check which tools are needed",
+        "interest_focus": "the finished result"
+      }
+    },
+    {
+      "biography": "Riley is a 21-year-old mechanic apprentice who\u2019s fixing his own car after a flat. He\u2019s got basic tools but wants to avoid wasting money on a shop visit \u2014 and he\u2019s nervous about messing up the wheel alignment.",
+      "occupation": "auto apprentice",
+      "preference_query": "Show close-up of hands unscrewing lug nuts, using tire iron, and checking rim for damage \u2014 no jargon, just clear steps I can follow myself.",
+      "persona_id": "tvsum-vt-07",
+      "domain": "tvsum:VT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "decide if I can do it myself",
+        "interest_focus": "hands working on the wheel"
+      }
+    }
+  ],
+  "tvsum:VU": [
+    {
+      "biography": "Harlan, 72, retired mechanic from rural Ohio, tinkers with vintage tractors and snowmobiles. He\u2019s fixing his \u201978 Ford Bronco this weekend and wants to avoid repeating past mistakes.",
+      "occupation": "Retired mechanic",
+      "preference_query": "Show close-up of the Bronco\u2019s rear axle locking up mid-turn, with snow spray and visible tire spin, then the driver\u2019s hands jerking the wheel as brakes fail.",
+      "persona_id": "tvsum-vu-00",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "understand what went wrong",
+        "interest_focus": "the moment of failure"
+      }
+    },
+    {
+      "biography": "Zara is a 20-year-old motorcycle courier in Portland who loves watching vehicles in chaotic or surreal situations\u2014especially when they\u2019re mid-fail. They\u2019re not a mechanic, but they\u2019ve seen enough street drama to recognize when a car or bike is about to do something unexpectedly dramatic.",
+      "occupation": "motorcycle courier",
+      "preference_query": "see the exact moment a silver sedan fishtails off a wet ramp, tires screeching, mud flying, and the driver\u2019s face frozen in shock as it flips sideways mid-air.",
+      "persona_id": "tvsum-vu-01",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the dramatic moment",
+        "interest_focus": "the vehicle itself"
+      }
+    },
+    {
+      "biography": "Lena, 28, works as a customer service rep for a ride-share app and lives in a hilly urban area. She\u2019s never driven off-road but often hears about stuck vehicles in her neighborhood \u2014 she wants to understand how they\u2019re rescued without getting stuck herself.",
+      "occupation": "customer service rep",
+      "preference_query": "Show me clear close-ups of winches pulling cars out of mud, straps wrapped around tires, and people using shovels to clear snow or gravel from under wheels.",
+      "persona_id": "tvsum-vu-02",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "judge the vehicle's capability",
+        "interest_focus": "recovery attempts"
+      }
+    },
+    {
+      "biography": "Mark, a 42-year-old tow truck mechanic from rural Montana, spends weekends volunteering to rescue stranded vehicles in blizzards. He\u2019s obsessed with how people react under pressure \u2014 whether they panic, laugh, or stay calm \u2014 and wants to master the exact recovery moves that calm those situations.",
+      "occupation": "Tow truck mechanic / volunteer roadside recovery specialist",
+      "preference_query": "Show close-up of a man calmly guiding a snowbound SUV onto a winch, while bystanders watch, smile, and cheer from behind a snowdrift.",
+      "persona_id": "tvsum-vu-03",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "learn the recovery technique",
+        "interest_focus": "people reacting"
+      }
+    },
+    {
+      "biography": "Zara, a retired geologist turned off-road vehicle enthusiast, spends weekends navigating remote mountain trails. They\u2019ve seen vehicles get stuck before but want to understand how terrain\u2014like loose scree or hidden mud pockets\u2014causes the most common failures.",
+      "occupation": "Retired geologist",
+      "preference_query": "Show close-ups of tires sinking into mud, wheels spinning on gravel slopes, and vehicles wedged between rocks \u2014 with terrain textures clearly visible.",
+      "persona_id": "tvsum-vu-04",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "understand what went wrong",
+        "interest_focus": "the terrain"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired aeronautical engineer who now volunteers to help stranded drivers on rural roads. She\u2019s curious about why vehicles fail \u2014 especially when stuck on steep inclines or in deep mud \u2014 and wants to understand the moment things go wrong before she attempts a rescue herself.",
+      "occupation": "Volunteer roadside rescuer",
+      "preference_query": "Show the exact instant a vehicle\u2019s wheel spins uselessly in thick mud, tires slipping sideways as the engine strains and the driver slams the brake.",
+      "persona_id": "tvsum-vu-05",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the dramatic moment",
+        "interest_focus": "the moment of failure"
+      }
+    },
+    {
+      "biography": "Liam, 20, is a part-time courier who just bought his first used pickup truck. He\u2019s skeptical about its off-road chops and wants proof before hauling gear on rough trails.",
+      "occupation": "Part-time courier",
+      "preference_query": "Show the truck\u2019s tires digging into mud and spinning while the driver leans out the window yelling \u2018Come on, you little beast!\u2019",
+      "persona_id": "tvsum-vu-06",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "judge the vehicle's capability",
+        "interest_focus": "the vehicle itself"
+      }
+    },
+    {
+      "biography": "Riley is a tow truck operator in Portland who specializes in recovering vehicles from muddy riverbanks and steep inclines. They\u2019ve been called to 37 \u2018stuck\u2019 jobs this year and are always researching new techniques to avoid damage or delays.",
+      "occupation": "Tow truck operator",
+      "preference_query": "Show a clear view of the winch cable attaching to the rear bumper, the driver\u2019s hand adjusting the tension lever, and the vehicle slowly lifting off the mud as the winch engages.",
+      "persona_id": "tvsum-vu-07",
+      "domain": "tvsum:VU",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "learn the recovery technique",
+        "interest_focus": "recovery attempts"
+      }
+    }
+  ],
+  "tvsum:BK": [
+    {
+      "biography": "Harold, 72, retired a postal worker from rural Vermont, is nervous about tackling wasps near his porch but determined to handle it safely after neighbors warned him. He\u2019s never touched a hive before, and his grandkids teased him about \u2018bee-brained\u2019 plans \u2014 so he\u2019s watching videos to learn step-by-step, hoping to avoid stings and keep his garden calm.",
+      "occupation": "Retired postal worker",
+      "preference_query": "Show me close-up shots of bees crawling on a wooden surface, their wings buzzing, and how to gently lift a wasp nest without touching it with bare hands.",
+      "persona_id": "tvsum-bk-00",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "follow the removal procedure",
+        "interest_focus": "close-ups of bees"
+      }
+    },
+    {
+      "biography": "Zara is a 21-year-old aspiring entomologist working seasonal shifts at a rural apiary, documenting pest behavior for a university research project. They\u2019ve been trained in safe wasp nest extraction and are currently evaluating techniques for a field manual, needing to confirm risk levels during extraction.",
+      "occupation": "Field research assistant in entomology",
+      "preference_query": "Show a close-up of the beekeeper\u2019s gloved hand using a smoke tube to calm the wasps while they\u2019re extracting the nest from a tree trunk.",
+      "persona_id": "tvsum-bk-01",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "assess the danger",
+        "interest_focus": "the beekeeper's technique"
+      }
+    },
+    {
+      "biography": "Lena, 28, works as a botanical illustrator and keeps a small urban hive on her balcony. She\u2019s fascinated by the hexagonal architecture of combs and often sketches them from life \u2014 but needs to see the actual structure up close to capture detail.",
+      "occupation": "Botanical illustrator",
+      "preference_query": "Show a clear, steady close-up of honeycomb cells, showing wax texture and bee activity inside frames, with natural light highlighting the hexagons.",
+      "persona_id": "tvsum-bk-02",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the insects up close",
+        "interest_focus": "hive structure"
+      }
+    },
+    {
+      "biography": "Mark, 42, a retired auto mechanic from rural Vermont, keeps a small backyard hive for honey and pollinator education. He\u2019s curious about comb structure and seasonal management, but doesn\u2019t want technical jargon\u2014just clear visuals of frames, bees, and harvest steps.",
+      "occupation": "Retired auto mechanic",
+      "preference_query": "Show close-up of golden honey dripping from a comb frame into a glass jar, with bees gently drifting around it.",
+      "persona_id": "tvsum-bk-03",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "learn hive management",
+        "interest_focus": "honey and combs"
+      }
+    },
+    {
+      "biography": "Zara, 55, runs a small community garden in rural Vermont and recently noticed a wasp nest near the compost bin. They\u2019ve never handled stinging insects before and are nervous but determined to manage the problem safely without hiring a pro.",
+      "occupation": "Community garden coordinator",
+      "preference_query": "Show close-up of gloves, veil, and booties being worn while reaching for the nest \u2014 no shaky shots, just clear steps.",
+      "persona_id": "tvsum-bk-04",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow the removal procedure",
+        "interest_focus": "protective equipment"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired a beekeeper from Vermont, now volunteers at a local apiary teaching seniors safe bee handling. She\u2019s preparing to relocate her own hive after neighbors complain \u2014 and wants to understand the real danger before acting.",
+      "occupation": "Volunteer apiary educator",
+      "preference_query": "Show close-ups of bees landing on flowers, antennae twitching, wings vibrating \u2014 and how they react when startled near humans.",
+      "persona_id": "tvsum-bk-05",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "assess the danger",
+        "interest_focus": "close-ups of bees"
+      }
+    },
+    {
+      "biography": "Liam, 21, is a biology student who keeps backyard hives and wants to master safe wasp nest removal before his summer internship at a conservation center. He\u2019s meticulous and prefers hands-on learning over textbooks.",
+      "occupation": "biology student",
+      "preference_query": "See the beekeeper\u2019s gloved hand gently brushing a wasp nest with a specialized tool while the insects hover inches away in slow motion.",
+      "persona_id": "tvsum-bk-06",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the insects up close",
+        "interest_focus": "the beekeeper's technique"
+      }
+    },
+    {
+      "biography": "Riley is a 27-year-old urban beekeeper in Portland who keeps a small rooftop hive and wants to understand how to inspect frames without disturbing the colony. They\u2019re curious about comb architecture and brood patterns but avoid technical jargon\u2014just clear visuals with labeled parts.",
+      "occupation": "Urban beekeeper and freelance graphic designer",
+      "preference_query": "Show close-up of a hand lifting a honeycomb frame to reveal brood cells, capped honey, and drone comb with labels pointing to each part.",
+      "persona_id": "tvsum-bk-07",
+      "domain": "tvsum:BK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "learn hive management",
+        "interest_focus": "hive structure"
+      }
+    }
+  ],
+  "tvsum:BT": [
+    {
+      "biography": "Harlan, 58, retired a mechanic from a small-town auto shop, now pedals his vintage 1978 Honda 800 for joy on weekend trails. He\u2019s never ridden a stunt bike before, but he\u2019s fascinated by how riders control balance mid-air \u2014 especially when the instructor breaks down each move step by step.",
+      "occupation": "retired mechanic",
+      "preference_query": "A close-up of the instructor\u2019s hands gripping the handlebars while explaining body positioning before launching into a wheelie.",
+      "persona_id": "tvsum-bt-00",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "learn to perform the trick",
+        "interest_focus": "the instructor talking"
+      }
+    },
+    {
+      "biography": "Zara, 68, retired aeronautical engineer, spends afternoons watching bike stunts with her cat on the sofa \u2014 they both love the chaos. Zara\u2019s never ridden a bike, but finds joy in watching how handlebars, chains, and tires behave during fails \u2014 especially when they twist, snap, or spin unexpectedly.",
+      "occupation": "retired aeronautical engineer",
+      "preference_query": "show close-ups of bikes\u2019 chains snapping, tires skidding sideways, and handlebars twisting during crashes \u2014 slow-motion, messy, and loud.",
+      "persona_id": "tvsum-bt-01",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see crashes and fails",
+        "interest_focus": "the bike and its parts"
+      }
+    },
+    {
+      "biography": "Lena is a professional BMX freestyle rider competing in national circuit events. She\u2019s currently customizing her bike for an upcoming stunt show and needs to verify suspension geometry and tire tread alignment before committing to a full tutorial.",
+      "occupation": "Professional BMX freestyle rider",
+      "preference_query": "Show close-up of bike\u2019s rear shock compression and tire contact patch during the tailwhip landing.",
+      "persona_id": "tvsum-bt-02",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "check the bike setup",
+        "interest_focus": "the trick being landed"
+      }
+    },
+    {
+      "biography": "Drew is a 28-year-old barista in Portland who\u2019s been riding a 2008 Honda CBR600RR for three years. He\u2019s planning his first big stunt show at a local bike park and wants to nail the crowd-pleasers \u2014 especially those that get roaring cheers and standing ovations.",
+      "occupation": "barista",
+      "preference_query": "A rider mid-air over a dirt jump with a crowd below shouting and raising arms as he lands cleanly on a dirt track.",
+      "persona_id": "tvsum-bt-03",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "watch the best stunts",
+        "interest_focus": "crowd reaction"
+      }
+    },
+    {
+      "biography": "Zara, a 38-year-old urban cyclist and part-time bike courier, is learning wheelies to impress friends at local coffee shops. They\u2019ve watched dozens of tutorials but struggle with balancing torque and knee alignment\u2014so they\u2019re hunting for a clear, slow-motion shot of someone adjusting their torso angle mid-wheelie.",
+      "occupation": "bike courier and amateur cyclist",
+      "preference_query": "Show me a person\u2019s torso leaning forward slightly while balancing on one wheel, knees bent, as they shift weight with their hips",
+      "persona_id": "tvsum-bt-04",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "learn to perform the trick",
+        "interest_focus": "body position and technique"
+      }
+    },
+    {
+      "biography": "Marta, 58, rides her electric bike to the grocery store every day. She\u2019s never done a trick, but loves watching the instructor\u2019s expressive face and exaggerated reactions when things go wrong.",
+      "occupation": "retired school bus driver",
+      "preference_query": "See the instructor\u2019s wide-eyed grin and mouth open in shock as a bike flips sideways mid-air near the curb.",
+      "persona_id": "tvsum-bt-05",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see crashes and fails",
+        "interest_focus": "the instructor talking"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired aerospace engineer, spends evenings tinkering with his vintage 1978 Harley, obsessing over suspension geometry and chain tension. He\u2019s been riding since he was 16 and still builds custom frames in his garage on weekends.",
+      "occupation": "Retired aerospace engineer",
+      "preference_query": "Show close-up of rear shock absorber alignment, chain tension gauge reading, and brake caliper bolts while bike is on lift.",
+      "persona_id": "tvsum-bt-06",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "check the bike setup",
+        "interest_focus": "the bike and its parts"
+      }
+    },
+    {
+      "biography": "Zara is a 21-year-old skateboarder from Portland who\u2019s been learning BMX tricks for a year. They\u2019re not a pro, but they\u2019re obsessed with clean landings and often film their own attempts to share with friends on TikTok.",
+      "occupation": "freelance graphic designer",
+      "preference_query": "Show me the exact moment the rider lands the trick \u2014 focus on their body posture, wheels touching pavement, and no wobble \u2014 before cutting to the next stunt.",
+      "persona_id": "tvsum-bt-07",
+      "domain": "tvsum:BT",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "watch the best stunts",
+        "interest_focus": "the trick being landed"
+      }
+    }
+  ],
+  "tvsum:DS": [
+    {
+      "biography": "Zara, 72, retired a marine biologist, now trains border collies in her coastal Maine home. They\u2019re researching dog show etiquette to enter their own first competition next month, focusing on how handlers guide individual dogs through judging rounds.",
+      "occupation": "Retired marine biologist",
+      "preference_query": "Show close-ups of individual dogs\u2019 gait, posture, and handler cues during judging rounds \u2014 especially how the dog\u2019s head, tail, and front legs move under pressure.",
+      "persona_id": "tvsum-ds-00",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow the competition result",
+        "interest_focus": "individual dogs"
+      }
+    },
+    {
+      "biography": "Lena is a 20-year-old aspiring vet student who spends her weekends volunteering at a local animal shelter. She\u2019s drawn to dogs\u2019 expressive faces and playful antics, often snapping photos of them on her phone \u2014 but only if they\u2019re in the frame for more than 5 seconds.",
+      "occupation": "animal care volunteer",
+      "preference_query": "See a close-up of a scruffy terrier\u2019s face as it tilts its head and wags its tail while sniffing a flower in a garden.",
+      "persona_id": "tvsum-ds-01",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the dogs",
+        "interest_focus": "close-ups of animals"
+      }
+    },
+    {
+      "biography": "Marcus is a 28-year-old barista in Portland who watches dog shows to unwind during his morning commute. He\u2019s never attended one in person, but loves watching how handlers guide their dogs and how judges evaluate them \u2014 he\u2019s fascinated by the subtle cues and body language.",
+      "occupation": "barista",
+      "preference_query": "Show me a handler guiding a fluffy golden retriever through a weave pole with clear focus on the dog\u2019s posture and the judge\u2019s nodding head after each maneuver.",
+      "persona_id": "tvsum-ds-02",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "follow one animal's story",
+        "interest_focus": "handlers and judges"
+      }
+    },
+    {
+      "biography": "Zara is a certified canine judge with 12 years of experience, currently working as a veterinary behaviorist in Portland. They\u2019ve judged regional shows and mentor new judges, but still study award moments to refine their scoring consistency.",
+      "occupation": "veterinary behaviorist & canine judge",
+      "preference_query": "Show close-up of the judge\u2019s hand placing the ribbon on the dog\u2019s collar, the handler\u2019s proud smile, and the crowd\u2019s applause at the podium.",
+      "persona_id": "tvsum-ds-03",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "understand judging criteria",
+        "interest_focus": "the award moment"
+      }
+    },
+    {
+      "biography": "Margaret, 58, retired a midwestern school counselor, now volunteers at local dog agility trials. She\u2019s been to three national dog shows and loves watching how crowds react to unexpected wins or dramatic comebacks.",
+      "occupation": "retired school counselor",
+      "preference_query": "Show me the crowd cheering as the final winner is announced, with close-ups of people clapping, waving, and dogs leaping over hurdles in the arena.",
+      "persona_id": "tvsum-ds-04",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "follow the competition result",
+        "interest_focus": "the crowd and venue"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired a postal worker from rural Vermont, now volunteers at his local animal shelter. He\u2019s planning to enter his elderly Labrador, \u2018Biscuit,\u2019 in next year\u2019s regional dog show and wants to see what seasoned competitors\u2019 dogs look like in action.",
+      "occupation": "Retired postal worker",
+      "preference_query": "See close-up of a senior Labrador\u2019s calm gait and focused eyes as it walks past a judge in a show ring, tail slightly lifted, ears relaxed.",
+      "persona_id": "tvsum-ds-05",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the dogs",
+        "interest_focus": "individual dogs"
+      }
+    },
+    {
+      "biography": "Zara, 20, is a part-time barista from Portland who adopted a rescue terrier mix last month. They\u2019re fascinated by how animals heal and adapt, and spend weekends volunteering at local shelters \u2014 but they\u2019ve never watched a dog show before.",
+      "occupation": "Barista",
+      "preference_query": "Close-up of a scruffy terrier mix wagging its tail while being gently petted by a volunteer at a shelter adoption event",
+      "persona_id": "tvsum-ds-06",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow one animal's story",
+        "interest_focus": "close-ups of animals"
+      }
+    },
+    {
+      "biography": "Lena is a professional canine evaluator who judges at regional dog shows and mentors novice handlers. She\u2019s on her way to work, scrolling through clips to refresh her memory on breed standard nuances and judge body language cues.",
+      "occupation": "Canine Evaluation Consultant",
+      "preference_query": "Show close-ups of judges nodding at correct stance, handlers adjusting gait, and scorecards being flipped during breed-specific evaluations.",
+      "persona_id": "tvsum-ds-07",
+      "domain": "tvsum:DS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "understand judging criteria",
+        "interest_focus": "handlers and judges"
+      }
+    }
+  ],
+  "tvsum:GA": [
+    {
+      "biography": "Eli, 72, is a retired veterinary technician who\u2019s now helping neighbors groom their senior dogs at home. They\u2019ve never used clippers before but want to avoid cutting too close \u2014 so they\u2019re watching for precise hand movements and safety cues.",
+      "occupation": "Retired veterinary technician",
+      "preference_query": "Show close-ups of the groomer\u2019s hands guiding clippers around a dog\u2019s ear and paw, with clear before/after contrast of fur length and neatness.",
+      "persona_id": "tvsum-ga-00",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the before/after",
+        "interest_focus": "the groomer's hands"
+      }
+    },
+    {
+      "biography": "Lena, 21, is a college student who recently adopted a scruffy terrier mix and wants to groom it at home. She\u2019s never done it before but is determined to avoid vet visits \u2014 she\u2019s researching YouTube tutorials to nail the \u2018show-ready\u2019 look.",
+      "occupation": "Biology major with a part-time job at a pet supply store",
+      "preference_query": "Show me the final moment when the dog\u2019s fur is dry, fluffy, and neatly trimmed around the face and paws \u2014 with no clumps or matted patches.",
+      "persona_id": "tvsum-ga-01",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "decide on a service for my pet",
+        "interest_focus": "the finished look"
+      }
+    },
+    {
+      "biography": "Marcel, a 28-year-old urban dog walker and part-time courier, watches grooming videos during his 15-minute subway commutes to learn gentle handling techniques for his rescued terrier mix. He\u2019s not a professional, but he\u2019s invested in making sure his dog stays calm and clean during care routines.",
+      "occupation": "courier and dog walker",
+      "preference_query": "Show the dog\u2019s eyes softening and ears relaxing as the groomer brushes its fur with slow, steady strokes.",
+      "persona_id": "tvsum-ga-02",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "learn the grooming technique",
+        "interest_focus": "the animal's reaction"
+      }
+    },
+    {
+      "biography": "Zara, 42, works as a bookstore archivist in Portland, has never groomed an animal before, and loves watching animal videos while sipping tea on weekends. They\u2019re curious about salon setups but overwhelmed by jargon \u2014 they just want to know what tools are actually used and how they\u2019re arranged.",
+      "occupation": "bookstore archivist",
+      "preference_query": "Show close-ups of grooming tools laid out on a wooden counter, with labels or names visible, in a clean, well-lit salon with hanging brushes and a soft rug underfoot.",
+      "persona_id": "tvsum-ga-03",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "check the tools used",
+        "interest_focus": "the salon environment"
+      }
+    },
+    {
+      "biography": "Marjorie, 58, is a retired veterinary technician turned mobile pet groomer who specializes in show-quality grooming for senior dogs. She\u2019s meticulous about tool precision and often compares clippers\u2019 performance across brands before recommending them to clients.",
+      "occupation": "Mobile pet groomer (retired vet tech)",
+      "preference_query": "See close-up shots of clippers trimming fur around ears and paws, with clear before/after contrast on a senior dog\u2019s coat texture and edge sharpness.",
+      "persona_id": "tvsum-ga-04",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the before/after",
+        "interest_focus": "tools and clippers"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired aeronautical engineer, keeps his Shih Tzu, Mabel, in pristine condition at home. He\u2019s never groomed a dog before and wants to avoid costly mistakes \u2014 so he\u2019s researching groomers who handle pets gently and precisely.",
+      "occupation": "Retired aerospace engineer",
+      "preference_query": "Show close-up of the groomer\u2019s hands carefully trimming Mabel\u2019s fur around her eyes and ears without rushing or pulling.",
+      "persona_id": "tvsum-ga-05",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "decide on a service for my pet",
+        "interest_focus": "the groomer's hands"
+      }
+    },
+    {
+      "biography": "Zara, 21, is a veterinary assistant at a small animal clinic who wants to learn how to groom a long-haired cat for a client\u2019s show. They\u2019ve never done it before but are drawn to the calm, precise movements of professional groomers in YouTube tutorials.",
+      "occupation": "veterinary assistant",
+      "preference_query": "Show me the exact moment when the groomer finishes trimming the cat\u2019s tail and lifts it to reveal the smooth, even coat with no stray hairs.",
+      "persona_id": "tvsum-ga-06",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "learn the grooming technique",
+        "interest_focus": "the finished look"
+      }
+    },
+    {
+      "biography": "Lena is a 28-year-old urban dog walker who\u2019s never groomed a pet before but wants to help her rescue pup feel comfortable. She\u2019s rushing between errands and needs quick, clear visuals to identify tools without distractions.",
+      "occupation": "Dog walker",
+      "preference_query": "Show close-ups of brushes, scissors, and towels with the dog\u2019s calm face and paws visible as tools are used.",
+      "persona_id": "tvsum-ga-07",
+      "domain": "tvsum:GA",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "check the tools used",
+        "interest_focus": "the animal's reaction"
+      }
+    }
+  ],
+  "tvsum:MS": [
+    {
+      "biography": "Zara, a retired culinary historian, spends her commutes reviewing regional sandwich traditions from across Europe. She\u2019s especially drawn to how ingredients are sourced and prepared in small, family-run eateries, not corporate kitchens.",
+      "occupation": "Retired culinary historian",
+      "preference_query": "Show close-ups of fresh bread crusts, artisanal cheese wheels, and hands slicing heirloom tomatoes in a rustic kitchen near a window.",
+      "persona_id": "tvsum-ms-00",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the ingredients",
+        "interest_focus": "the restaurant or kitchen"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired from teaching piano, now enjoys slow-cooking and sandwich-making as a soothing ritual. She lives alone in a sunlit kitchen with her cat, often deciding between homemade meals and delivery\u2014she wants to see if the final sandwich looks worth ordering.",
+      "occupation": "Retired piano teacher",
+      "preference_query": "See close-up of the finished sandwich with visible layers, spread, and garnish, held in hands ready to eat.",
+      "persona_id": "tvsum-ms-01",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "decide whether to order it",
+        "interest_focus": "the finished dish"
+      }
+    },
+    {
+      "biography": "Leo, 21, is a part-time barista who\u2019s never made a sandwich from scratch\u2014until now. He\u2019s got a tiny apartment kitchen and wants to impress his roommate with a gourmet-looking lunch without wasting ingredients.",
+      "occupation": "barista",
+      "preference_query": "Show close-up of hands placing each ingredient\u2014lettuce, tomato, cheese, meat\u2014onto the bread in exact sequence as the recipe says.",
+      "persona_id": "tvsum-ms-02",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "replicate the recipe exactly",
+        "interest_focus": "ingredients being added"
+      }
+    },
+    {
+      "biography": "Zara is a 28-year-old non-binary barista who\u2019s never made a sandwich before, but wants to impress friends with a simple, tasty one. They\u2019re researching quick, beginner-friendly steps before attempting it at home on a Saturday afternoon.",
+      "occupation": "barista",
+      "preference_query": "See the cook\u2019s hands spreading mayo on bread, talking clearly while holding a knife and pointing to ingredients on the counter.",
+      "persona_id": "tvsum-ms-03",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "quick overview of the dish",
+        "interest_focus": "the cook talking"
+      }
+    },
+    {
+      "biography": "Marina is a pastry chef with 15 years of experience, currently training sous chefs at a high-end bistro. She\u2019s meticulous about ingredient sourcing and often watches prep videos to refine her knife skills and ingredient sequencing.",
+      "occupation": "Pastry chef & culinary instructor",
+      "preference_query": "See hands precisely tearing lettuce leaves and placing them on a toasted sourdough slice, with visible grain and buttery crust in frame.",
+      "persona_id": "tvsum-ms-04",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the ingredients",
+        "interest_focus": "hands preparing food"
+      }
+    },
+    {
+      "biography": "Harold, a retired postal worker from Portland, spends his weekday commutes watching food videos to decide whether to order lunch. He\u2019s a casual cook who prefers simple, recognizable meals \u2014 and always checks the kitchen setup or restaurant vibe first.",
+      "occupation": "retired postal worker",
+      "preference_query": "Show me the counter, the sandwich being assembled, and the chef\u2019s hands \u2014 is the kitchen clean and busy? Does the menu look real?",
+      "persona_id": "tvsum-ms-05",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "decide whether to order it",
+        "interest_focus": "the restaurant or kitchen"
+      }
+    },
+    {
+      "biography": "Eli is a retired librarian who enjoys simple, satisfying meals and finds joy in recreating recipes from old cookbooks. They take pride in making sandwiches that look just right, especially for quiet afternoons at home.",
+      "occupation": "Retired librarian",
+      "preference_query": "A clear, close-up shot of the finished sandwich on a wooden board, with visible ingredients like lettuce, tomato, and cheese layered neatly between two slices of bread.",
+      "persona_id": "tvsum-ms-06",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "replicate the recipe exactly",
+        "interest_focus": "the finished dish"
+      }
+    },
+    {
+      "biography": "Lena is a 20-year-old college student who\u2019s never made a sandwich before and wants to impress her roommates with something easy but tasty. She\u2019s watching on her phone during a 2-minute break between classes, so she needs a fast, clear visual guide \u2014 no fluff, just ingredients being added step by step.",
+      "occupation": "college student",
+      "preference_query": "Show close-ups of hands placing each ingredient \u2014 bread, meat, cheese, veggies \u2014 onto the sandwich as it\u2019s built.",
+      "persona_id": "tvsum-ms-07",
+      "domain": "tvsum:MS",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "quick overview of the dish",
+        "interest_focus": "ingredients being added"
+      }
+    }
+  ],
+  "tvsum:PK": [
+    {
+      "biography": "Marina, 58, retired a decade ago from teaching art history, now runs a small community garden with her late husband\u2019s tools. She\u2019s been a parkour hobbyist for five years, joining local groups to stay active \u2014 she doesn\u2019t compete, but loves seeing how others move together in sync. She watches clips on her phone while commuting on the bus, usually only 30 seconds per clip, chasing the most jaw-dropping group leaps and coordinated landings.",
+      "occupation": "Community garden coordinator",
+      "preference_query": "See a group of four parkour runners mid-air, all jumping off a low wall together, landing in unison on a paved path, arms outstretched in sync.",
+      "persona_id": "tvsum-pk-00",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a woman",
+        "viewing_goal": "watch the most impressive jumps",
+        "interest_focus": "group interaction"
+      }
+    },
+    {
+      "biography": "Harold, 68, retired physics professor, enjoys watching parkour for its fluid motion and urban ingenuity\u2014often pausing to study footwork on fire escapes and stair landings. He watches from his recliner, sipping tea, drawn to how runners adapt terrain with grace, not speed.",
+      "occupation": "Retired university physics professor",
+      "preference_query": "Show a man in sneakers vaulting over a metal railing on a city sidewalk, landing softly on his forefoot before stepping onto a concrete ledge.",
+      "persona_id": "tvsum-pk-01",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "study the movement technique",
+        "interest_focus": "the urban setting"
+      }
+    },
+    {
+      "biography": "Zara, 21, is a college student studying environmental science who recently discovered parkour through a viral TikTok. They\u2019re drawn to the fluidity of movement but have zero experience\u2014just want to understand how to safely mimic the jump or vault without falling.",
+      "occupation": "Environmental science student",
+      "preference_query": "Show a clear, slow-motion shot of one athlete\u2019s feet leaving the ground mid-vault over a low wall with visible body alignment and landing posture.",
+      "persona_id": "tvsum-pk-02",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow one athlete",
+        "interest_focus": "the jump or vault itself"
+      }
+    },
+    {
+      "biography": "Lena is a 28-year-old urban parkour instructor based in Berlin, training clients for street-level agility. She\u2019s planning her own urban route and wants to study real-world spots and athlete insights from pros who\u2019ve mapped them.",
+      "occupation": "Urban Parkour Instructor",
+      "preference_query": "Show close-ups of athletes pointing at alley walls, rooftops, and railings they used, with clear labels or on-screen text naming the location.",
+      "persona_id": "tvsum-pk-03",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the locations used",
+        "interest_focus": "athletes talking"
+      }
+    },
+    {
+      "biography": "Rafael, a 42-year-old former construction foreman turned urban parkour enthusiast, trains three nights a week in abandoned warehouses and underpasses. He\u2019s not a pro, but he\u2019s obsessed with clean landings \u2014 especially when a runner soars over a dumpster or vaults a railing and lands with perfect posture, then immediately gets up without stumbling.",
+      "occupation": "former construction foreman",
+      "preference_query": "A man in a dark hoodie mid-air over a concrete railing, landing flat-footed on a paved surface, then instantly rolling into a crouch before standing up without wobbling.",
+      "persona_id": "tvsum-pk-04",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "watch the most impressive jumps",
+        "interest_focus": "landings and falls"
+      }
+    },
+    {
+      "biography": "Remy, a retired librarian turned urban hiker, watches parkour videos on their commute to stay mentally sharp and inspired by fluid movement. They\u2019re drawn to how groups coordinate\u2014how bodies sync mid-air, how shouts or laughter punctuate a run, and how strangers become teammates in fleeting moments.",
+      "occupation": "urban hiker",
+      "preference_query": "Show me mid-air group vaults where runners touch hands or feet, and split-second team shouts during a coordinated wall climb.",
+      "persona_id": "tvsum-pk-05",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "study the movement technique",
+        "interest_focus": "group interaction"
+      }
+    },
+    {
+      "biography": "Eleanor, 68, retired a school principal, watches parkour videos to gently stretch her mind and body. She lives alone in a quiet apartment and finds peace in observing fluid motion through city streets and alleyways.",
+      "occupation": "retired school principal",
+      "preference_query": "Show me one woman athlete flowing gracefully through urban rooftops and fire escapes, her movements slow and deliberate, framed by brick walls and streetlights.",
+      "persona_id": "tvsum-pk-06",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "follow one athlete",
+        "interest_focus": "the urban setting"
+      }
+    },
+    {
+      "biography": "Rafael is a 21-year-old professional parkour athlete from Lyon, France, who scouts urban terrain for his next competition. He\u2019s known for his precision vaults over railings and staircases, and he\u2019s currently scouting locations in Berlin for a new video project.",
+      "occupation": "Professional parkour athlete",
+      "preference_query": "Show me clear, slow-motion shots of vaults over concrete railings and stair landings with visible urban textures and exact foot placement.",
+      "persona_id": "tvsum-pk-07",
+      "domain": "tvsum:PK",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the locations used",
+        "interest_focus": "the jump or vault itself"
+      }
+    }
+  ],
+  "tvsum:PR": [
+    {
+      "biography": "Leo, 21, is a part-time barista and amateur street dance enthusiast who watches parade footage to unwind after long shifts. He\u2019s drawn to vibrant, kinetic performances\u2014especially when dancers wear bold costumes or sync to loud, rhythmic music.",
+      "occupation": "part-time barista",
+      "preference_query": "I want to see dancers in colorful costumes moving energetically down the street, arms swinging and feet kicking in sync with loud music.",
+      "persona_id": "tvsum-pr-00",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the whole spectacle",
+        "interest_focus": "performers and dancers"
+      }
+    },
+    {
+      "biography": "Zara is a 28-year-old freelance sound engineer who lives in Portland and rarely attends public events\u2014until they hear about a local parade. They\u2019re curious but overwhelmed by crowds and don\u2019t know what to look for, so they\u2019re scanning videos to spot the most visually striking moments before committing to watch the whole thing.",
+      "occupation": "freelance sound engineer",
+      "preference_query": "Show me close-ups of people\u2019s faces, costumes, and hands holding props or flags in the parade, especially when they\u2019re smiling or dancing.",
+      "persona_id": "tvsum-pr-01",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "catch the main highlight",
+        "interest_focus": "close-ups of participants"
+      }
+    },
+    {
+      "biography": "Marina, a 42-year-old urban event planner in Portland, is staging her first large-scale street parade and wants to capture the authentic energy of crowds in motion. She\u2019s studied logistics and crowd psychology but needs visceral sensory cues to guide her staging decisions.",
+      "occupation": "Urban event planner",
+      "preference_query": "Show dense, smiling crowds waving flags and holding handmade signs, with visible movement and overlapping voices in the background.",
+      "persona_id": "tvsum-pr-02",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "sense the atmosphere",
+        "interest_focus": "the crowd"
+      }
+    },
+    {
+      "biography": "Harlan, a retired textile craftsman from Portland, spends weekends photographing local parades, especially admiring hand-sewn parade costumes and vintage float designs. He\u2019s been tracking the \u2018Gilded Lanterns\u2019 float for 15 years\u2014its 1970s-style brass lanterns and velvet-draped figures are his obsession.",
+      "occupation": "retired textile craftsman",
+      "preference_query": "A float with brass lanterns draped in velvet, carried by costumed figures in 1970s-style outfits, moving down Main Street at dusk.",
+      "persona_id": "tvsum-pr-03",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "spot a specific group or float",
+        "interest_focus": "floats and costumes"
+      }
+    },
+    {
+      "biography": "Zara, 72, retired a decade ago from restoring historic buildings, now walks the city\u2019s main streets daily with a folding cane and a worn leather satchel. They love how crowds transform sidewalks into living tapestries, especially when street vendors, flags, and marching bands spill into alleyways and corners.",
+      "occupation": "Former restoration craftsman",
+      "preference_query": "See wide-angle shots of sidewalks packed with people, storefronts draped in bunting, and street vendors setting up near curbside benches before the parade begins.",
+      "persona_id": "tvsum-pr-04",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the whole spectacle",
+        "interest_focus": "the street and surroundings"
+      }
+    },
+    {
+      "biography": "Lena, 20, is a part-time barista from Portland who loves spontaneous street festivals. She\u2019s never attended a parade before but watches clips on TikTok to feel the energy \u2014 her goal is to spot the most dazzling dancer or performer in under two minutes.",
+      "occupation": "part-time barista",
+      "preference_query": "A dancer in bright costume spinning mid-air under flashing lights, crowd cheering, confetti falling around them.",
+      "persona_id": "tvsum-pr-05",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "catch the main highlight",
+        "interest_focus": "performers and dancers"
+      }
+    },
+    {
+      "biography": "Liam, a cultural anthropologist specializing in urban ritual, attends parades to document communal identity. He\u2019s currently researching how street processions encode belonging in post-industrial cities and needs visceral sensory data to validate his thesis.",
+      "occupation": "Cultural Anthropologist",
+      "preference_query": "Show me close-ups of faces in crowd, hands holding banners, rain-slicked boots marching, and sudden smiles breaking through grimaces \u2014 the raw, human texture of the parade\u2019s pulse.",
+      "persona_id": "tvsum-pr-06",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "sense the atmosphere",
+        "interest_focus": "close-ups of participants"
+      }
+    },
+    {
+      "biography": "Riley is a 38-year-old community archivist who volunteers at local festivals, documenting crowd energy through photos and short films. They\u2019re planning their first parade entry and want to understand how crowds react to specific floats\u2014especially those with synchronized movement or costume layers\u2014to replicate the vibe they admire.",
+      "occupation": "community archivist",
+      "preference_query": "Show me a crowd reacting to a float with dancers in layered, color-changing costumes moving in sync across a wide street.",
+      "persona_id": "tvsum-pr-07",
+      "domain": "tvsum:PR",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "spot a specific group or float",
+        "interest_focus": "the crowd"
+      }
+    }
+  ],
+  "tvsum:FM": [
+    {
+      "biography": "Leo, 21, a photography student who captures street moments for his portfolio, watches flash mobs to study crowd dynamics and spontaneous reactions. He\u2019s curled up on his couch with a mug, scrolling through clips before class, always drawn to the split-second when dancers burst into view.",
+      "occupation": "Photography student",
+      "preference_query": "The exact moment the first dancer steps forward, eyes wide, as strangers around them freeze, then gasp, smile, or stumble back in surprise.",
+      "persona_id": "tvsum-fm-00",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the crowd's reaction",
+        "interest_focus": "the moment it starts"
+      }
+    },
+    {
+      "biography": "Zara is a freelance sound engineer who often attends street festivals in Portland, drawn to the energy of spontaneous art. They\u2019ve never participated in a flash mob but love watching how crowds coalesce into choreographed moments \u2014 especially when the group forms in a surprising location.",
+      "occupation": "freelance sound engineer",
+      "preference_query": "the exact moment the entire group aligns into formation, visible from their first synchronized step to the first collective pose",
+      "persona_id": "tvsum-fm-01",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "watch the performance",
+        "interest_focus": "the full group formation"
+      }
+    },
+    {
+      "biography": "Marina, a 42-year-old marketing manager from Portland, is planning her first flash mob and wants to understand how crowds react to sudden choreography. She\u2019s nervous about staging it herself and needs to see real-life reactions to feel confident.",
+      "occupation": "marketing manager",
+      "preference_query": "Show me the exact moment when dancers burst from behind a storefront, and capture the startled faces of passersby who freeze mid-step or gasp aloud.",
+      "persona_id": "tvsum-fm-02",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "catch the surprise moment",
+        "interest_focus": "bystanders reacting"
+      }
+    },
+    {
+      "biography": "Harlan, a retired urban planner, watches flash mobs to analyze crowd dynamics and public engagement for a community revitalization project he\u2019s advising. He\u2019s methodical, notes body language and spatial choreography, and rarely watches beyond 60 seconds unless a key moment unfolds.",
+      "occupation": "Community revitalization consultant",
+      "preference_query": "A man in a bright yellow vest leading a flash mob, arms outstretched, as dancers form a heart shape around him at the street corner.",
+      "persona_id": "tvsum-fm-03",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "understand the message or cause",
+        "interest_focus": "the dancers"
+      }
+    },
+    {
+      "biography": "Zara, 68, retired a decade ago from a career in textile arts, now enjoys spontaneous street theater with her knitting circle. They watch flash mobs on their phone during morning bus rides, captivated by how strangers react \u2014 especially when signs or banners are involved, as it feels like a shared communal moment.",
+      "occupation": "retired textile artist",
+      "preference_query": "see people holding colorful banners or signs during the flash mob, especially when the crowd reacts with laughter or clapping at the display",
+      "persona_id": "tvsum-fm-04",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the crowd's reaction",
+        "interest_focus": "banners and signage"
+      }
+    },
+    {
+      "biography": "Lena, 21, is a part-time barista in Portland who loves spontaneous street art and viral dance moments. She watches short clips before bed to unwind, savoring the exact moment a flash mob erupts \u2014 usually when people freeze mid-stride or the music kicks in.",
+      "occupation": "barista",
+      "preference_query": "A sudden burst of dancers in bright costumes erupting from a crowd, hands raised, feet tapping, as a bassline hits.",
+      "persona_id": "tvsum-fm-05",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "watch the performance",
+        "interest_focus": "the moment it starts"
+      }
+    },
+    {
+      "biography": "Liam, a 28-year-old barista from Portland, watches viral street performances to unwind after shifts \u2014 he\u2019s never participated, but loves the communal magic of surprise. He\u2019s curious about how groups coordinate silently until the moment they erupt into choreography.",
+      "occupation": "barista",
+      "preference_query": "A large group suddenly assembling in sync \u2014 hands raised, feet tapping, or all turning toward a single point \u2014 as if from nowhere.",
+      "persona_id": "tvsum-fm-06",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "catch the surprise moment",
+        "interest_focus": "the full group formation"
+      }
+    },
+    {
+      "biography": "Riley is a community arts coordinator who\u2019s planning a flash mob to raise awareness about local housing insecurity. They\u2019ve seen successful examples but want to understand how bystander reactions amplify\u2014or undermine\u2014the message. Riley\u2019s team will perform in a busy downtown plaza, and they\u2019re particularly curious about how crowd behavior shifts once the performance ends.",
+      "occupation": "Community arts coordinator",
+      "preference_query": "Show close-ups of strangers\u2019 facial expressions as they first notice the dancers, then how their body language changes after the performance stops.",
+      "persona_id": "tvsum-fm-07",
+      "domain": "tvsum:FM",
+      "dataset": "tvsum",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "understand the message or cause",
+        "interest_focus": "bystanders reacting"
+      }
+    }
+  ],
+  "summe:action_sports": [
+    {
+      "biography": "Kai, 21, is a professional freerunner who trains daily in urban canyons; he\u2019s obsessed with the physics of impact \u2014 how bodies absorb force, how surfaces deform, how the world reacts in split seconds. He watches videos not to learn tricks, but to feel the raw, visceral truth of landing \u2014 the crunch, the breath, the stillness after motion.",
+      "occupation": "freerunner",
+      "preference_query": "Show me the exact moment a jumper\u2019s body hits the ground \u2014 the bent knees, the dust kick-up, the way their shoulders drop \u2014 as if I\u2019m standing right there watching.",
+      "persona_id": "summe-action-sports-00",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "sense the whole experience",
+        "interest_focus": "the landing or impact"
+      }
+    },
+    {
+      "biography": "Zara is a 28-year-old freelance drone cinematographer who trains in parkour to stay agile for shoots. They\u2019re fascinated by how athletes process real-time feedback during high-risk maneuvers, often recording their own reactions to refine technique.",
+      "occupation": "freelance drone cinematographer",
+      "preference_query": "Show close-ups of athletes\u2019 facial expressions and body posture right after landing a trick, especially when they\u2019re visibly surprised or relieved.",
+      "persona_id": "summe-action-sports-01",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "study the technique",
+        "interest_focus": "people reacting"
+      }
+    },
+    {
+      "biography": "Marina, 42, a freelance photographer from Asheville, North Carolina, is planning her first mountain biking trip in the Rockies. She\u2019s not a thrill-seeker but wants to capture the raw beauty of alpine trails and sweeping valley views \u2014 not just the fall lines, but the moments where the terrain breathes with wildness.",
+      "occupation": "freelance photographer",
+      "preference_query": "Show me the rider cresting a ridge at sunset, backlit by golden light, with jagged peaks and a turquoise lake below in the frame.",
+      "persona_id": "summe-action-sports-02",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the peak action moment",
+        "interest_focus": "the scenery"
+      }
+    },
+    {
+      "biography": "Harlan, 58, retired a 30-year auto mechanic, now collects vintage motorcycles and watches dirt bike races for the thrill of seeing riders tumble and recover. He\u2019s never ridden a bike but loves the drama of crashes \u2014 especially when the rider\u2019s body twists mid-air or hits the ground hard with sparks flying.",
+      "occupation": "Retired auto mechanic",
+      "preference_query": "Show me the rider\u2019s body twisting in mid-air as they lose control, hitting the dirt with sparks flying from their boot or helmet.",
+      "persona_id": "summe-action-sports-03",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "watch for crashes or fails",
+        "interest_focus": "the athlete in motion"
+      }
+    },
+    {
+      "biography": "Zara is a retired aerospace engineer who now volunteers as a safety consultant for mountain biking leagues. They\u2019ve spent decades analyzing gear performance under stress and now seek to understand how modern action sports equipment evolves to meet extreme conditions.",
+      "occupation": "retired aerospace engineer / safety consultant",
+      "preference_query": "Show close-ups of suspension systems flexing under impact, helmet visors cracking from falls, and frame welds bending then snapping under torque \u2014 all in real-time, high-res shots.",
+      "persona_id": "summe-action-sports-04",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "sense the whole experience",
+        "interest_focus": "equipment"
+      }
+    },
+    {
+      "biography": "Lena, 21, is a weekend snowboarder from Vermont who\u2019s learning to land tricks at local parks. She watches clips to dissect foot placement and body control before hitting the slopes again.",
+      "occupation": "Retail assistant at a mountain gear shop",
+      "preference_query": "Show close-up of snowboarder\u2019s knees bending and board touching snow at the exact moment of landing a jump",
+      "persona_id": "summe-action-sports-05",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "study the technique",
+        "interest_focus": "the landing or impact"
+      }
+    },
+    {
+      "biography": "Marcus, a 28-year-old freelance drone operator from Portland, watches action clips to fuel his own adrenaline-fueled content. He\u2019s not a pro, but he\u2019s drawn to raw, human reactions \u2014 the gasps, the screams, the stunned silence \u2014 that make the stunts feel real.",
+      "occupation": "freelance drone operator",
+      "preference_query": "See the rider mid-air flipping over a jump, crowd erupting as he lands, camera zooming in on the guy beside him yelling 'Holy shit!'",
+      "persona_id": "summe-action-sports-06",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the peak action moment",
+        "interest_focus": "people reacting"
+      }
+    },
+    {
+      "biography": "Riley is a 38-year-old urban landscape architect who\u2019s never strapped into a harness or ridden a board, but dreams of hiking cliffs and gliding over waterfalls. They\u2019re researching ways to safely tackle beginner-friendly cliff jumping and riverboarding, inspired by the wild, untouched scenery they\u2019ve seen in documentaries \u2014 and they\u2019re terrified of falling, so they watch for every stumble, splash, or misstep that could teach them how to avoid disaster.",
+      "occupation": "landscape architect",
+      "preference_query": "Show me slow-motion clips of people slipping off ledges into turquoise rivers, with mist rising from impact, and wide shots of jagged cliffs under storm clouds \u2014 focus on the falls, not the riders.",
+      "persona_id": "summe-action-sports-07",
+      "domain": "summe:action_sports",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "watch for crashes or fails",
+        "interest_focus": "the scenery"
+      }
+    }
+  ],
+  "summe:aviation": [
+    {
+      "biography": "Zara, a retired airline mechanic turned aviation hobbyist, spends weekends at airshows tracking ground crew movements and crowd reactions. They\u2019ve never flown but love studying cockpit routines through footage\u2014especially how teams coordinate during pre-flight checks.",
+      "occupation": "Aviation enthusiast / retired aircraft maintenance engineer",
+      "preference_query": "Show close-up of ground crew moving equipment near cockpit door while pilots review checklist with headset on, crowd watching from behind barriers.",
+      "persona_id": "summe-aviation-00",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the cockpit procedure",
+        "interest_focus": "ground crew and spectators"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired aeronautical engineer who still marvels at how planes glide over runways\u2014she watches takeoffs and landings to unwind after her morning tea.",
+      "occupation": "Retired aerospace technician",
+      "preference_query": "A close-up of a plane\u2019s landing gear touching down on the runway, tires screeching, and the cockpit window reflecting runway lights.",
+      "persona_id": "summe-aviation-01",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "watch the landing or takeoff",
+        "interest_focus": "the runway"
+      }
+    },
+    {
+      "biography": "Kai, 21, is a college freshman studying environmental science who recently got a pilot\u2019s license for fun. He\u2019s fascinated by the sleek lines of planes and loves watching them glide above clouds \u2014 especially when they\u2019re bathed in golden sunset light.",
+      "occupation": "Environmental science student with a side-hobby pilot\u2019s cert",
+      "preference_query": "Show me close-ups of aircraft wings catching sunlight, slow-motion shots of planes banking over mountain ranges, and clear views of cockpit windows reflecting sky.",
+      "persona_id": "summe-aviation-02",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "enjoy the views",
+        "interest_focus": "the aircraft"
+      }
+    },
+    {
+      "biography": "Zara is a 28-year-old flight operations analyst at a regional airline, preparing to pilot a cross-country route for the first time. They\u2019re methodically comparing aircraft visuals to internal manuals to confirm cockpit layout and window-view ergonomics before their next solo flight.",
+      "occupation": "flight operations analyst",
+      "preference_query": "Show clear close-ups of cockpit windows with visible aircraft registration codes, wingtips against sky, and horizon lines indicating altitude during cruise phase.",
+      "persona_id": "summe-aviation-03",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "spot the aircraft type",
+        "interest_focus": "the view from the window"
+      }
+    },
+    {
+      "biography": "Lena is a 42-year-old aviation hobbyist who volunteers at a regional flight museum and dreams of one day flying as a passenger on a vintage propeller plane. She\u2019s fascinated by cockpit mechanics and often studies old flight manuals to understand how analog instruments worked before digital displays.",
+      "occupation": "Flight museum volunteer and amateur aviation historian",
+      "preference_query": "Show me the moment the pilot checks the analog altimeter and heading indicator before takeoff, with the cockpit lights glowing and dials moving.",
+      "persona_id": "summe-aviation-04",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the cockpit procedure",
+        "interest_focus": "the cockpit and instruments"
+      }
+    },
+    {
+      "biography": "Harold, a retired airline mechanic from Kansas, watches flights during his daily bus commute to see ground crews wave-off planes and crowds cheer as jets taxi for takeoff.",
+      "occupation": "Retired aircraft maintenance technician",
+      "preference_query": "A ground crew member in a high-visibility vest guiding a jet taxiing past waving spectators near the runway edge.",
+      "persona_id": "summe-aviation-05",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "watch the landing or takeoff",
+        "interest_focus": "ground crew and spectators"
+      }
+    },
+    {
+      "biography": "Zara, 68, retired a decade ago from a career in early childhood education, now spends evenings knitting and watching planes from their cozy living room window. They\u2019ve always loved the rhythm of takeoffs and landings \u2014 especially how the runway glows under evening lights \u2014 and recently bought a small drone to capture the same views from above, though they\u2019re still learning how to fly it.",
+      "occupation": "Retired early childhood educator",
+      "preference_query": "See the runway lights flicker as a plane rolls into position, tires crunching on tarmac, and the cockpit lights glowing as it brakes to a stop.",
+      "persona_id": "summe-aviation-06",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "enjoy the views",
+        "interest_focus": "the runway"
+      }
+    },
+    {
+      "biography": "Lena is a 21-year-old aviation engineering student at MIT, currently interning at a regional airline\u2019s maintenance wing. She\u2019s analyzing aircraft performance data for her senior thesis and needs to identify specific models in real-world footage to cross-reference with technical specs.",
+      "occupation": "Aviation Engineering Intern",
+      "preference_query": "Show close-up of the aircraft\u2019s nose cone, tail markings, and engine nacelles to confirm model and livery details.",
+      "persona_id": "summe-aviation-07",
+      "domain": "summe:aviation",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "spot the aircraft type",
+        "interest_focus": "the aircraft"
+      }
+    }
+  ],
+  "summe:vehicles": [
+    {
+      "biography": "Mira, 21, a mechanical engineering student who loves watching how machines adapt to extreme environments\u2014she\u2019s seen snowmobiles climb glaciers and forklifts navigate collapsed warehouses. She watches to understand how design overcomes terrain, not just to be amazed.",
+      "occupation": "mechanical engineering student",
+      "preference_query": "Show me the exact moment a tracked vehicle\u2019s treads dig into loose gravel and how it adjusts its weight to climb the slope without slipping.",
+      "persona_id": "summe-vehicles-00",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "understand what happened",
+        "interest_focus": "the obstacle or terrain"
+      }
+    },
+    {
+      "biography": "Remy is a freelance drone pilot who enjoys documenting extreme mechanical rescues\u2014often for his Instagram. He\u2019s seen it all from cliffside winches to flooded engine bays, but he\u2019s always curious about what happens after the chaos ends.",
+      "occupation": "freelance drone pilot",
+      "preference_query": "Show the moment the crane arm slips, then cut to the spilled oil, tangled cables, and the crew scrambling to stabilize the wrecked truck.",
+      "persona_id": "summe-vehicles-01",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the risky manoeuvre",
+        "interest_focus": "the aftermath"
+      }
+    },
+    {
+      "biography": "Zara, a 38-year-old urban landscaper with no mechanical experience, is researching how to safely maneuver a mini excavator into tight garden spaces after seeing it on a DIY home renovation show. They\u2019re nervous but determined to tackle the project themselves and want to see the exact moment something goes wrong\u2014or right\u2014so they can anticipate and avoid pitfalls.",
+      "occupation": "Urban landscaper",
+      "preference_query": "Show the exact second the mini excavator\u2019s arm slips on uneven ground, with visible soil displacement and the operator\u2019s startled reaction.",
+      "persona_id": "summe-vehicles-02",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "catch the dramatic moment",
+        "interest_focus": "the critical moment"
+      }
+    },
+    {
+      "biography": "Marla is a retired aerospace engineer who now consults on heavy-lift crane operations for offshore oil rigs. She\u2019s spent 30 years analyzing mechanical failure points under extreme stress and remembers the exact moment a 120-ton crane nearly toppled during a hurricane\u2014she wants to see if any modern rig can handle that scenario without structural compromise.",
+      "occupation": "retired aerospace engineer, offshore rig crane consultant",
+      "preference_query": "Show a 120-ton crawler crane on a storm-battered offshore platform, its outriggers digging into concrete, as wind lifts its boom 15 degrees off horizontal while hydraulic systems hold steady under 100mph gusts.",
+      "persona_id": "summe-vehicles-03",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "judge the machine's capability",
+        "interest_focus": "the vehicle"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired a mechanical engineer from a small-town factory, now watches YouTube videos on his phone while riding the bus. He\u2019s curious about how machinery behaves under stress \u2014 especially when bystanders react \u2014 and often tries to deduce what went wrong from their expressions and gestures.",
+      "occupation": "Retired mechanical engineer",
+      "preference_query": "Show clear close-ups of bystanders\u2019 faces and body language reacting to a vehicle or machine malfunction, especially surprise or confusion, to help me understand what happened next.",
+      "persona_id": "summe-vehicles-04",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "understand what happened",
+        "interest_focus": "bystanders"
+      }
+    },
+    {
+      "biography": "Zara, 21, is a part-time mechanic who loves watching DIY videos but gets restless if the engine isn\u2019t revving or the wheels aren\u2019t skidding. They\u2019re currently recovering from a bad night shift and crave adrenaline without effort \u2014 hence, they watch videos where machinery conquers impossible terrain, like a forklift balancing on a narrow ledge or a tractor driving backward down a steep, muddy ravine.",
+      "occupation": "Part-time mechanic",
+      "preference_query": "See the moment a dune buggy teeters over a crumbling cliff edge, tires gripping loose gravel as it leans sideways, engine roaring at the last second before it falls.",
+      "persona_id": "summe-vehicles-05",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the risky manoeuvre",
+        "interest_focus": "the obstacle or terrain"
+      }
+    },
+    {
+      "biography": "Lena, 28, works in a warehouse logistics team and has never touched a wrench. She\u2019s fascinated by machines but terrified of anything that moves too fast \u2014 so she watches videos to see how things *recover* after chaos. She\u2019s scrolling through YouTube at 2 a.m. after a long shift, eyes glued to the screen, desperate to find the one moment when the wreckage settles and the machine stands still \u2014 not broken, just\u2026 quiet again.",
+      "occupation": "warehouse logistics coordinator",
+      "preference_query": "Show me the exact moment after the crash \u2014 the smoke clearing, the dented metal settling, the crew walking up to inspect it without panic.",
+      "persona_id": "summe-vehicles-06",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "catch the dramatic moment",
+        "interest_focus": "the aftermath"
+      }
+    },
+    {
+      "biography": "Rafael Morales, a 42-year-old heavy equipment foreman with 18 years in quarry operations, is prepping to retrofit a 2005 Komatsu PC200 excavator for unstable terrain. He\u2019s cross-referencing real-world failure points before his crew deploys the machine on a landslide-prone site next week.",
+      "occupation": "Heavy equipment foreman",
+      "preference_query": "Show the exact moment the excavator\u2019s undercarriage slips on loose shale, with hydraulic pressure gauges spiking and the cab shuddering \u2014 frame the pivot point before the operator reacts.",
+      "persona_id": "summe-vehicles-07",
+      "domain": "summe:vehicles",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "judge the machine's capability",
+        "interest_focus": "the critical moment"
+      }
+    }
+  ],
+  "summe:landmarks_travel": [
+    {
+      "biography": "Mira, 21, a college student majoring in art history, spends weekends sketching buildings from her apartment window. She\u2019s drawn to intricate details\u2014stone carvings, ironwork, and cornice lines\u2014and often gets lost in architectural textures while scrolling through travel reels.",
+      "occupation": "Art history student",
+      "preference_query": "Close-up shots of ornate stonework, wrought-iron balconies, and carved cornices on historic landmarks, framed by soft natural light.",
+      "persona_id": "summe-landmarks-travel-00",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the landmark itself",
+        "interest_focus": "architectural close-ups"
+      }
+    },
+    {
+      "biography": "Ben, 28, is a freelance photographer from Portland who\u2019s never visited Europe but dreams of capturing iconic architecture. He\u2019s planning his first trip and wants to understand how to frame buildings with people for scale and life \u2014 not just postcards.",
+      "occupation": "freelance photographer",
+      "preference_query": "Show close-ups of tourists posing beside stone arches or doorways, with visible expressions and clothing details against the building\u2019s carved textures.",
+      "persona_id": "summe-landmarks-travel-01",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "see architectural detail",
+        "interest_focus": "people in the frame"
+      }
+    },
+    {
+      "biography": "Zara, a travel journalist specializing in urban cultural reporting, is planning a solo trip to Kyoto next month. They\u2019ve visited most major landmarks but crave immersive sensory details \u2014 especially how locals and tourists interact in shared spaces \u2014 to capture the pulse of the city before writing their piece.",
+      "occupation": "travel journalist",
+      "preference_query": "Show me crowds milling near Kinkaku-ji\u2019s golden pavilion at golden hour \u2014 people\u2019s faces, their gestures, how they pause to take photos or chat with strangers nearby.",
+      "persona_id": "summe-landmarks-travel-02",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "sense the atmosphere",
+        "interest_focus": "the crowd"
+      }
+    },
+    {
+      "biography": "Marla, 58, retired a decade ago after 35 years as a school principal, now travels solo to historic sites she\u2019s only read about. She plans her visits meticulously, often sketching architectural details in her journal to match her memories.",
+      "occupation": "Retired school principal",
+      "preference_query": "Show me a clear, wide-angle shot of the monument\u2019s main archway at golden hour, with tourists walking beneath it and sunlight catching the stone carvings.",
+      "persona_id": "summe-landmarks-travel-03",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "plan my own visit",
+        "interest_focus": "the monument"
+      }
+    },
+    {
+      "biography": "Harold, 72, retired a mechanical engineer from Ohio, now travels weekly to explore European cityscapes. He enjoys walking through historic districts, pausing to photograph ornate facades and bustling street corners \u2014 always curious about how old buildings blend with modern life.",
+      "occupation": "Retired mechanical engineer",
+      "preference_query": "Show me the landmark\u2019s stone facade and the narrow street filled with caf\u00e9 tables and passing pedestrians around it.",
+      "persona_id": "summe-landmarks-travel-04",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the landmark itself",
+        "interest_focus": "the surrounding city"
+      }
+    },
+    {
+      "biography": "Zara, 21, is a part-time barista and weekend sketch artist who\u2019s fascinated by how buildings are built \u2014 especially the tiny, intricate details most people miss. They\u2019ve never taken an architecture class, but they love zooming in on YouTube videos to study how tiles, brackets, or ironwork come together, imagining themselves drawing it next.",
+      "occupation": "part-time barista / weekend sketch artist",
+      "preference_query": "Show me close-ups of stone carvings, rusted iron brackets, and tiled roof edges \u2014 focus on textures and how pieces fit together, not wide shots or crowds.",
+      "persona_id": "summe-landmarks-travel-05",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see architectural detail",
+        "interest_focus": "architectural close-ups"
+      }
+    },
+    {
+      "biography": "Lena is a cultural anthropologist who researches pilgrimage routes across Southeast Asia, often documenting how locals interact with sacred sites. She\u2019s currently comparing rituals in Bali and Phuket to inform a new museum exhibit \u2014 her 1-minute video preview must feel authentic, not staged.",
+      "occupation": "Cultural anthropologist",
+      "preference_query": "Show me locals offering prayers at dawn near a temple\u2019s main gate, with visible incense smoke curling around their hands and temple bells in the background.",
+      "persona_id": "summe-landmarks-travel-06",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "sense the atmosphere",
+        "interest_focus": "people in the frame"
+      }
+    },
+    {
+      "biography": "Rafael, a 42-year-old freelance photographer from Portland, plans spontaneous weekend trips to lesser-known landmarks, often avoiding tourist crowds. He researches locations in advance to capture candid, unposed moments \u2014 but only if he can gauge how many people will be there to avoid over-crowded scenes.",
+      "occupation": "freelance photographer",
+      "preference_query": "Show me wide shots of the landmark with visible groups of people, including how many are walking nearby and where they\u2019re clustering.",
+      "persona_id": "summe-landmarks-travel-07",
+      "domain": "summe:landmarks_travel",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a man",
+        "viewing_goal": "plan my own visit",
+        "interest_focus": "the crowd"
+      }
+    }
+  ],
+  "summe:everyday_life": [
+    {
+      "biography": "Zara, a retired urban planner, watches short clips during her train commute to stay connected with her grandkids\u2019 spontaneous adventures \u2014 hiking trails, backyard forts, and impromptu dance-offs. She values authenticity over polish, seeking raw, unscripted moments that feel alive and full of motion.",
+      "occupation": "Retired urban planner",
+      "preference_query": "See kids running barefoot through dew-damp grass, laughing as they tumble over a fallen log, arms flung wide.",
+      "persona_id": "summe-everyday-life-00",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow what is being made",
+        "interest_focus": "spontaneous moments"
+      }
+    },
+    {
+      "biography": "Eleanor, 72, retired a textile artist who now spends her days gardening and sipping tea with her grandchildren. She treasures candid moments\u2014especially when they\u2019re laughing, cooking, or showing off their latest school projects.",
+      "occupation": "Retired textile artist",
+      "preference_query": "See her grandson proudly holding up a handmade quilt he stitched with his mother, both grinning at the camera in her sunlit living room.",
+      "persona_id": "summe-everyday-life-01",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the people I know",
+        "interest_focus": "the result"
+      }
+    },
+    {
+      "biography": "Leo, 21, a part-time barista in Portland, often replays family videos to feel close to his younger sister, who lives abroad. He\u2019s drawn to the quiet joy in people\u2019s eyes \u2014 especially when they\u2019re laughing or surprised \u2014 and treasures those fleeting moments more than any filter or pose.",
+      "occupation": "part-time barista",
+      "preference_query": "A close-up of his sister\u2019s face as she bursts into laughter while holding a deflated balloon, eyes crinkled and mouth wide open.",
+      "persona_id": "summe-everyday-life-02",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "relive the moment",
+        "interest_focus": "faces and expressions"
+      }
+    },
+    {
+      "biography": "Zara is a 28-year-old barista from Portland who\u2019s planning to host a backyard movie night for the first time. They\u2019ve never organized anything this social before, and they\u2019re nervous about the setup\u2014especially the lighting and seating. Zara\u2019s goal is to find the funniest, most relatable moment from someone else\u2019s backyard setup so they can laugh while they prep.",
+      "occupation": "Barista",
+      "preference_query": "A close-up of someone setting up a projector on a picnic blanket, laughing as a dog jumps onto the screen, then another shot of mismatched lawn chairs with snacks falling into them.",
+      "persona_id": "summe-everyday-life-03",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "catch the funny bit",
+        "interest_focus": "the setting"
+      }
+    },
+    {
+      "biography": "Marina is a ceramic artist who works from her studio in Portland, Oregon. She\u2019s spent the last decade refining her hand-building techniques, and now mentors emerging potters. She watches short videos to study how others shape clay without tools\u2014especially when they\u2019re mid-forming a vessel\u2019s curve or pinch-thinning a wall.",
+      "occupation": "ceramic artist and studio mentor",
+      "preference_query": "show close-up of hands rotating a wet clay coil while pinching the rim to form a bowl\u2019s opening",
+      "persona_id": "summe-everyday-life-04",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a woman",
+        "viewing_goal": "follow what is being made",
+        "interest_focus": "the activity itself"
+      }
+    },
+    {
+      "biography": "Harold, a retired postal worker from Portland, spends his commute scrolling through family videos, especially those capturing unscripted laughter or quiet shared moments. He loves spotting his niece\u2019s messy hair or his neighbor\u2019s dog chasing squirrels \u2014 anything that feels real and unplanned.",
+      "occupation": "Retired postal worker",
+      "preference_query": "A woman laughing while holding a toddler who\u2019s spilling cereal, with sunlight catching the crumbs on the floor",
+      "persona_id": "summe-everyday-life-05",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the people I know",
+        "interest_focus": "spontaneous moments"
+      }
+    },
+    {
+      "biography": "Felix, 72, retired a marine biologist, now spends afternoons knitting sweaters for grandchildren and tending to a rose garden in their cozy cottage. They don\u2019t watch videos for trends or drama \u2014 they seek the quiet, tactile moments that feel like coming home.",
+      "occupation": "Retired marine biologist",
+      "preference_query": "A close-up of wrinkled hands gently pulling a knitted sweater\u2019s cuff tight around a child\u2019s wrist, sunlight glinting off the yarn.",
+      "persona_id": "summe-everyday-life-06",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "relive the moment",
+        "interest_focus": "the result"
+      }
+    },
+    {
+      "biography": "Lena is a 20-year-old barista in Portland who loves laughing at her coworkers\u2019 over-the-top reactions to spilled coffee. She\u2019s never watched a full video unless she\u2019s already seen the funny bit \u2014 and she only watches for 2 minutes max, so she\u2019s always on the lookout for the punchline in the first 30 seconds.",
+      "occupation": "barista",
+      "preference_query": "A close-up of a person\u2019s face suddenly crinkling in surprise, mouth wide open mid-laugh, eyes squinting, as someone else\u2019s hand drops something onto their lap.",
+      "persona_id": "summe-everyday-life-07",
+      "domain": "summe:everyday_life",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a woman",
+        "viewing_goal": "catch the funny bit",
+        "interest_focus": "faces and expressions"
+      }
+    }
+  ],
+  "summe:animals_nature": [
+    {
+      "biography": "Leo, 21, works part-time at a local bookstore and volunteers at a wildlife rehabilitation center. He\u2019s fascinated by the quiet moments when humans gently assist injured animals back to health, often staying late to watch recovery progress.",
+      "occupation": "bookstore clerk / wildlife volunteer",
+      "preference_query": "Watch a rescuer carefully bandaging a bird\u2019s wing while another holds its body steady on a towel, both wearing gloves and soft boots.",
+      "persona_id": "summe-animals-nature-00",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a man",
+        "viewing_goal": "follow the rescue or event",
+        "interest_focus": "people helping"
+      }
+    },
+    {
+      "biography": "Zara is a freelance sound editor in Portland who hikes local trails on weekends, drawn to wildlife by the quiet sounds they make. They\u2019ve never seen a mountain lion up close and are curious whether they\u2019re more elusive or common than online videos suggest.",
+      "occupation": "freelance sound editor",
+      "preference_query": "Show a mountain lion walking through tall grass near a creek, then pause on its face as it looks toward the camera before vanishing into brush.",
+      "persona_id": "summe-animals-nature-01",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "see the animals",
+        "interest_focus": "the outcome"
+      }
+    },
+    {
+      "biography": "Marina, 42, a retired school librarian turned urban gardener, is researching how to create a backyard pond for birds and frogs. She\u2019s never built anything like it before and wants to understand how water shapes the surrounding landscape \u2014 not just how to dig a hole.",
+      "occupation": "retired librarian / urban gardener",
+      "preference_query": "Show me a clear shot of water reflecting trees and reeds, with birds landing near the edge and dragonflies hovering above the surface.",
+      "persona_id": "summe-animals-nature-02",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the environment",
+        "interest_focus": "the water or landscape"
+      }
+    },
+    {
+      "biography": "Harlan is a retired wildlife biologist who spent 40 years tracking migratory elk in the Rockies. Now he volunteers with conservation NGOs, helping interpret camera trap footage for citizen science projects.",
+      "occupation": "retired wildlife biologist / conservation volunteer",
+      "preference_query": "Show me a clear shot of an elk calf standing beside its mother as she lowers her head to graze, with snow-dusted pine trees in the background.",
+      "persona_id": "summe-animals-nature-03",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "50-64",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "looking for one specific moment",
+        "gender_presentation": "a man",
+        "viewing_goal": "understand what is happening",
+        "interest_focus": "the animals"
+      }
+    },
+    {
+      "biography": "They\u2019ve been volunteering at a local wildlife rehab center for 15 years, often bringing their late husband\u2019s old binoculars to observe rehabbed owls and fox kits. Now retired, they ride the bus daily to watch updates on injured animals recovering \u2014 their phone screen is their window to the wild they can\u2019t always visit in person.",
+      "occupation": "Retired wildlife volunteer",
+      "preference_query": "Close-up of a fox kit\u2019s paw gently touching a human hand during a feeding session at a rehab center, with visible bandages and soft fur.",
+      "persona_id": "summe-animals-nature-04",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "65+",
+        "attention_budget": "30s",
+        "expertise": "hobbyist",
+        "watching_context": "on a phone during a commute",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "follow the rescue or event",
+        "interest_focus": "close-ups"
+      }
+    },
+    {
+      "biography": "Mara, 21, a biology major at a small college, spends her weekends volunteering at a wildlife rehabilitation center near campus. She loves watching animals recover and interact with caretakers\u2014especially when humans gently guide their healing without overwhelming them.",
+      "occupation": "student volunteer at wildlife rehab center",
+      "preference_query": "a close-up of a fox cub being gently held by a volunteer\u2019s hands as it sniffs a bowl of food, sunlight glinting off its fur",
+      "persona_id": "summe-animals-nature-05",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "18-24",
+        "attention_budget": "15s",
+        "expertise": "casual interest",
+        "watching_context": "relaxing at home",
+        "gender_presentation": "a woman",
+        "viewing_goal": "see the animals",
+        "interest_focus": "people helping"
+      }
+    },
+    {
+      "biography": "Liam, 28, is a city-based software developer who recently moved to a rural cabin and is learning to identify local wildlife. He\u2019s fascinated by how nature adapts \u2014 especially what happens when animals are startled or seek shelter \u2014 but has no field experience.",
+      "occupation": "software developer",
+      "preference_query": "Show me a clear shot of a deer suddenly dashing into thick brush, followed by a visible trail of disturbed leaves and mud where it ran.",
+      "persona_id": "summe-animals-nature-06",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "25-34",
+        "attention_budget": "2min",
+        "expertise": "complete novice",
+        "watching_context": "deciding whether to watch the full video",
+        "gender_presentation": "a man",
+        "viewing_goal": "see the environment",
+        "interest_focus": "the outcome"
+      }
+    },
+    {
+      "biography": "Zara is a coastal wetland ecologist based in Oregon, documenting tidal marsh restoration for a state conservation grant. They\u2019re preparing to lead a community restoration project and need to understand how native vegetation responds to tidal inundation patterns.",
+      "occupation": "Wetland restoration ecologist",
+      "preference_query": "Show close-up frames of tidal water receding from salt marsh grasses, revealing exposed roots and mudflats with visible sediment movement.",
+      "persona_id": "summe-animals-nature-07",
+      "domain": "summe:animals_nature",
+      "dataset": "summe",
+      "attributes": {
+        "age_band": "35-49",
+        "attention_budget": "1min",
+        "expertise": "domain professional",
+        "watching_context": "researching before doing it themselves",
+        "gender_presentation": "a non-binary person",
+        "viewing_goal": "understand what is happening",
+        "interest_focus": "the water or landscape"
+      }
+    }
+  ]
+}
