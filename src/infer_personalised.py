@@ -1,30 +1,4 @@
-"""Raw video + free-text preference -> personalised summary video (Phase 13).
 
-DSNet ships `src/infer.py`, which already does video -> features -> KTS -> predict ->
-knapsack -> summary mp4. Three things had to change for this project:
-
-  1. features must be **CLIP-512**, not GoogLeNet-1024, to match the trained model;
-  2. the query must be threaded into `model.predict(seq, query_emb)` (Phase 8);
-  3. the user's free-text preference must be encoded by CLIP's TEXT encoder.
-
-Nothing about the query is restricted to the 128 generated personas -- CLIP maps arbitrary
-text into the same space, so any sentence works at inference time.
-
-Uses PyAV for both decode and encode (no OpenCV dependency), and decodes sequentially
-rather than seeking, for the same reason as Phase 4: frame-seek APIs can silently return
-a neighbouring frame.
-
-Usage:
-    python src/infer_personalised.py --source video.mp4 \
-        --query "close-ups of hands working with tools, and the finished result" \
-        --save summary.mp4
-
-    # show that it personalises: two queries, same video, reports overlap
-    python src/infer_personalised.py --source video.mp4 \
-        --query "the tools and each step of the procedure" \
-        --query2 "the finished result and the vehicle driving away" \
-        --save out
-"""
 import argparse
 import sys
 from pathlib import Path
@@ -37,10 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "third_party/DSNet/src"))
 sys.path.insert(0, str(ROOT / "src"))
 
-from anchor_free.dsnet_af import DSNetAF          # noqa: E402
-from helpers import vsumm_helper, bbox_helper     # noqa: E402
-from kts.cpd_auto import cpd_auto                 # noqa: E402
-from query_head import QueryConditioner           # noqa: E402
+from anchor_free.dsnet_af import DSNetAF          
+from helpers import vsumm_helper, bbox_helper     
+from kts.cpd_auto import cpd_auto                 
+from query_head import QueryConditioner           
 
 
 def decode_sampled(path, sample_rate):
@@ -84,11 +58,7 @@ def run_kts(n_frames, features, sample_rate, max_shots=None, vmax=0.5):
     picks = np.arange(0, seq_len) * sample_rate
     F = features / np.clip(np.linalg.norm(features, axis=1, keepdims=True), 1e-8, None)
     kernel = np.matmul(F, F.T)
-    # vmax controls KTS's complexity penalty. DSNet uses 1.0, tuned for L2-normalised
-    # GoogLeNet descriptors. CLIP similarities are distributed differently: at vmax=1.0
-    # this video yields 22 shots where the dataset has 64, and the resulting coarse
-    # selection is identical for every query. vmax=0.5 yields 67 -- matching the dataset's
-    # ~1 shot per 10 sampled frames -- and personalisation becomes visible.
+
     ncp = min(seq_len - 1, max_shots if max_shots else max(int(seq_len / 2), 2))
     cps, _ = cpd_auto(kernel, ncp, vmax, verbose=False)
     cps = cps * sample_rate

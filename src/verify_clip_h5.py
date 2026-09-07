@@ -1,24 +1,4 @@
-"""Verify the CLIP h5 files against the base h5 (Phase 4, step 3).
 
-Four checks per video:
-
-  1. schema      -- every key present; all non-`features` datasets bit-identical to base.
-  2. shape/sanity-- features are (n_steps, dim), float32, finite, no all-zero rows.
-  3. mapping     -- the decisive one. The base GoogLeNet features were computed from the
-                    CORRECT video at the SAME picks. So the frame-to-frame cosine
-                    similarity profile of the CLIP features should track the GoogLeNet
-                    one. A wrong video would still look internally coherent, but its
-                    profile would not correlate with the base file's.
-  4. control     -- the same correlation against a DIFFERENT video's profile, to show
-                    what a mismapping actually scores.
-
-Check 3 exists because pairing the wrong mp4 with the right gtscore is silent: training
-runs, loss falls, results are wrong. The previous attempt at this project left a file
-named `segment_captions_MISMAPPED.json.bak`.
-
-Usage:
-    python src/verify_clip_h5.py --dataset tvsum summe
-"""
 import argparse
 import sys
 from pathlib import Path

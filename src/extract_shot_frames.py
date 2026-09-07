@@ -1,19 +1,4 @@
-"""Cache one representative frame per shot, once per video (Phase 7, step 0).
 
-Phase 7 scores 600 (video, persona) pairs. Decoding the video inside the scoring loop
-would mean ~600 decodes at ~20 s each (~3 hours) to produce frames that are IDENTICAL
-across personas -- the persona changes the prompt, not the pixels. So frames are decoded
-once per video (75 decodes) and cached as JPEGs.
-
-One frame per shot, taken at the midpoint of each `change_points` segment, resized so its
-long side is <= 512 px (matching the server's --limit-mm-per-prompt width/height, ~185
-image tokens each).
-
-Decoding is sequential, not seek-based -- see src/extract_clip.py for why.
-
-Usage:
-    python src/extract_shot_frames.py --dataset tvsum summe
-"""
 import argparse
 import json
 from pathlib import Path

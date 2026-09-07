@@ -1,21 +1,4 @@
-"""Evaluate PGL-SUM's predicted scores with DSNet's evaluation harness.
 
-Why this exists (runbook Phase 3 checkpoint: "all under one evaluation harness"):
-PGL-SUM ships its own F1 code, which differs from DSNet's in annotator aggregation and
-summary generation. Putting a number from PGL-SUM's harness next to a number from
-DSNet's harness compares measurement instruments, not models. So we take PGL-SUM's raw
-per-frame scores and push them through the *same* KTS->knapsack selection and the *same*
-F1 as Phase 2.
-
-Model selection: DSNet keeps the epoch with max F-score on the test split
-(anchor_based/train.py:102-104). That is optimistic, but to compare fairly PGL-SUM gets
-the identical rule -- max over epochs, same harness. Both numbers are therefore
-optimistic in the same way. Epoch -1 (the untrained model) is excluded.
-
-Usage (cwd = repo root):
-    python src/eval_pglsum.py --exp third_party/PGL-SUM/Summaries/PGL-SUM/exp1 \
-                              --out results/phase3/pglsum_dsnet_harness.json
-"""
 import argparse
 import json
 import statistics as st

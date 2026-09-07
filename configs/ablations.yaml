@@ -1,5 +1,4 @@
-# Phase 11 ablation grid. Each entry varies exactly ONE axis from configs/default.yaml.
-# Results: results/phase11/phase11-notes.md
+
 
 axis_1_query_mechanism:
   # rho = Spearman vs held-out persona labels; sens = % persona pairs whose summary differs

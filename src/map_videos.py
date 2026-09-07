@@ -1,25 +1,4 @@
-"""Build and VERIFY the h5-key -> raw-video-file mapping (Phase 4, step 1).
 
-Why this is a separate script: getting this wrong is the single most dangerous error in
-the whole project. If `video_7` is paired with the wrong mp4, CLIP features are computed
-for one video and combined with another video's gtscore/change_points. Training still
-runs, loss still falls, and every downstream number is silently wrong. (The previous
-attempt at this project left a file literally named `segment_captions_MISMAPPED.json.bak`.)
-
-So the mapping is derived from *evidence*, never from assumed ordering:
-
-  SumMe : the h5 stores `video_name` -> match the filename, then CONFIRM n_frames agrees.
-  TVSum : the h5 stores no name -> match on `n_frames`, which is a near-unique fingerprint.
-
-Frame counts come from `ffprobe -count_frames`, which decodes and counts exactly, rather
-than the container's metadata header (which is frequently wrong for these files).
-
-Any video whose count is ambiguous or unmatched is reported and left OUT of the mapping;
-the script exits non-zero so extraction cannot silently proceed on a partial mapping.
-
-Usage:
-    python src/map_videos.py --tvsum-dir <dir> --summe-dir <dir> --out data/video_map.json
-"""
 import argparse
 import json
 import subprocess

@@ -51,7 +51,30 @@ FRAMES = Path("/var/tmp/akn57/data/shot_frames")
 CACHE = ROOT / "labels_cache"
 SCORES = CACHE / "scores"
 
-PROMPT_VERSION = "v1"          # bump to invalidate the cache when the prompt changes
+PROMPT_VERSION = "v2"          # bump to invalidate the cache when the prompt changes
+
+# ---------------------------------------------------------------------------------------
+# Two scoring methods.
+#
+# "chunked" (v1, the runbook's approach): 16 shot images per call, model returns a score
+# per shot. MEASURED TO FAIL: the resulting labels select shots that match the persona's
+# own query no better than another persona's (alignment margin -0.002, own-query wins for
+# 4/8 personas = chance), against a CLIP-oracle upper bound of +0.011. Two causes, both of
+# which had to be fixed:
+#   1. with 16 images in one prompt the query is not attended to per shot;
+#   2. asking for a bare number per frame collapses to a constant (5/8 personas).
+#
+# "pershot" (v2, default): one image per call, and instead of asking for a number we ask a
+# yes/no question and read P(yes) from the logprobs -- continuous by construction.
+# Alignment margin +0.014 with 6/8 personas correct, matching the CLIP oracle, and every
+# persona yields a non-constant vector. It is also faster (~15 calls/s: one image, one
+# output token) and removes the need for chunking and overlap alignment entirely, since
+# each shot is scored independently.
+# ---------------------------------------------------------------------------------------
+
+SYS_PERSHOT = ("You answer a single yes/no question about one video frame. Reply with "
+               "exactly one word: Yes or No. Judge only what is literally visible in the "
+               "frame, not how exciting or well-shot it is.")
 
 SYSTEM = (
     "You rate video shots for a specific viewer. You must DISCRIMINATE between shots: "
@@ -88,6 +111,49 @@ def chunk_spans(n_shots, size, overlap):
 def cache_key(ds, vkey, pid, model, span, rep):
     raw = f"{ds}|{vkey}|{pid}|{model}|{PROMPT_VERSION}|{span[0]}-{span[1]}|{rep}"
     return hashlib.md5(raw.encode()).hexdigest()
+
+
+def score_shot_pyes(client, model, ds, vkey, persona, frame_dir, index, shot,
+                    temperature=0.0):
+    """One cached call: P(yes) that this frame shows what the persona asked for."""
+    import math
+    key = cache_key(ds, vkey, persona["persona_id"], model, (shot, shot + 1), "pyes")
+    cpath = CACHE / f"{key}.json"
+    if cpath.exists():
+        try:
+            return float(json.loads(cpath.read_text())["p"])
+        except Exception:
+            cpath.unlink(missing_ok=True)
+    q = persona["preference_query"]
+    content = [{"type": "text",
+                "text": f'Does this frame show: "{q}"? Answer Yes or No.'},
+               {"type": "image_url", "image_url":
+                   {"url": f"data:image/jpeg;base64,{b64_of(str(frame_dir / index['shots'][shot]))}"}}]
+    err = None
+    for attempt in range(3):
+        try:
+            r = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "system", "content": SYS_PERSHOT},
+                          {"role": "user", "content": content}],
+                temperature=temperature, max_tokens=1,
+                logprobs=True, top_logprobs=20, seed=3 + attempt)
+            top = r.choices[0].logprobs.content[0].top_logprobs
+            py = pn = 0.0
+            for t in top:
+                w = t.token.strip().lower()
+                if w.startswith("yes"):
+                    py += math.exp(t.logprob)
+                elif w.startswith("no"):
+                    pn += math.exp(t.logprob)
+            if py + pn <= 0:
+                raise ValueError("no yes/no mass in top logprobs")
+            p = py / (py + pn)
+            cpath.write_text(json.dumps({"p": p, "shot": shot}))
+            return p
+        except Exception as e:
+            err = f"{type(e).__name__}: {str(e)[:100]}"
+    raise RuntimeError(f"{ds}/{vkey}/{persona['persona_id']} shot {shot}: {err}")
 
 
 def score_chunk(client, model, ds, vkey, persona, dom_label, frame_dir, index, span, rep,
@@ -185,15 +251,21 @@ def do_pair(args, client, ds, vkey, persona, dom_label):
     frame_dir = FRAMES / ds / vkey
     index = json.loads((frame_dir / "index.json").read_text())
     n_shots = index["n_shots"]
-    spans = chunk_spans(n_shots, args.chunk_size, args.overlap)
 
-    chunk_scores = []
-    for span in spans:
-        reps = [score_chunk(client, args.model, ds, vkey, persona, dom_label, frame_dir,
-                            index, span, r, args.temperature) for r in range(args.k)]
-        chunk_scores.append(np.mean(reps, axis=0))      # self-consistency
-
-    v = align_and_merge(spans, chunk_scores, n_shots)
+    if args.method == "pershot":
+        spans = [(i, i + 1) for i in range(n_shots)]
+        v = np.array([score_shot_pyes(client, args.model, ds, vkey, persona,
+                                      frame_dir, index, s) for s in range(n_shots)])
+        lo, hi = v.min(), v.max()
+        v = (v - lo) / (hi - lo) if hi > lo else v * 0.0
+    else:
+        spans = chunk_spans(n_shots, args.chunk_size, args.overlap)
+        chunk_scores = []
+        for span in spans:
+            reps = [score_chunk(client, args.model, ds, vkey, persona, dom_label, frame_dir,
+                                index, span, r, args.temperature) for r in range(args.k)]
+            chunk_scores.append(np.mean(reps, axis=0))  # self-consistency
+        v = align_and_merge(spans, chunk_scores, n_shots)
     if float(np.std(v)) <= 1e-6:
         return f"DEGENERATE (std={np.std(v):.2e})"      # constant vector = unusable label
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -210,7 +282,10 @@ def main():
     ap.add_argument("--seeds", default=str(ROOT / "personas/seeds.json"))
     ap.add_argument("--model", default="qwen3vl-8b")
     ap.add_argument("--base-url", default="http://localhost:8000/v1")
-    ap.add_argument("--k", type=int, default=3, help="self-consistency repeats")
+    ap.add_argument("--method", default="pershot", choices=["pershot", "chunked"],
+                    help="pershot = P(yes) per frame (aligned, default); "
+                         "chunked = runbook v1 (measured to be semantically unaligned)")
+    ap.add_argument("--k", type=int, default=3, help="self-consistency repeats (chunked only)")
     ap.add_argument("--chunk-size", type=int, default=16)
     ap.add_argument("--overlap", type=int, default=4)
     ap.add_argument("--temperature", type=float, default=0.2)

@@ -1,25 +1,4 @@
-"""Generate the domain-conditioned persona pool (Phase 6.2).
 
-For each domain in personas/seeds.json, sample N attribute combinations and ask the
-teacher to expand each into one coherent viewer with a natural-language
-`preference_query` -- the string Phase 8 encodes with CLIP's text encoder and Phase 7
-puts in the scoring prompt.
-
-Two deliberate choices:
-
-* **temperature 0.9** (high). Opposite of Phase 7 scoring (0.2). Here sampling diversity
-  is the goal; there, reproducibility is.
-* **stride sampling, not random.** Random sampling of attribute combinations clumps and
-  leaves holes. Walking each attribute list with a co-prime stride spreads N personas
-  evenly across the space and is deterministic, so the pool is reproducible from a seed.
-
-Structured output uses `response_format`, NOT `extra_body={"guided_json": ...}` -- the
-latter is silently ignored by vLLM 0.19.1 and returns unconstrained text (see
-results/phase5/phase5-notes.md).
-
-Usage:
-    python src/gen_personas.py --n-per-domain 8 --out personas/pool.json
-"""
 import argparse
 import json
 import re

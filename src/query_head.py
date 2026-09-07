@@ -1,40 +1,4 @@
-"""Query conditioning for DSNet (Phase 8).
 
-The persona query is encoded once by CLIP's TEXT encoder and fused into the frame
-features before DSNet's scoring layers. CLIP is what makes this possible: its image and
-text encoders share one space, so a query and a frame feature are directly comparable
-(this is the entire reason for Phase 4).
-
-The architectural change is deliberately tiny -- the contribution of this project is the
-SUPERVISION, not a new network. Anything larger would make it impossible to attribute a
-result to persona labels rather than to architecture.
-
-## Identity initialisation (important)
-
-The runbook suggests verifying that disabling conditioning "recovers the original model
-exactly ... with zero-init proj bias". That does not hold: for concat,
-`proj([f ; 0]) = W_f f + b`, and zeroing only `b` leaves `W_f f` with `W_f` random --
-a random linear map of the features, not the features.
-
-So both modes are initialised to the EXACT identity:
-
-  concat : W = [I | 0], b = 0   ->  proj([f ; q]) = f  at init, for any q
-  film   : gamma(.) = 1, beta(.) = 0 (zero weights, bias 1 / 0)  ->  1*f + 0 = f
-
-Consequences:
-  * the Phase 8 checkpoint becomes genuinely verifiable (bit-identical outputs);
-  * training starts from exactly the Phase 2 baseline instead of a randomly perturbed
-    version of it, so the optimiser never has to first undo random damage;
-  * if persona conditioning helps nothing, the model can simply stay at identity -- a
-    clean null result rather than a confounded one.
-
-Usage as a library:
-    from query_head import QueryConditioner
-    model.qcond = QueryConditioner(feat_dim=512, query_dim=512, mode="concat")
-
-Precompute the query embeddings:
-    python src/query_head.py --precompute --out data/query_emb.npz
-"""
 import argparse
 import json
 from pathlib import Path

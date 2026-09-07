@@ -1,12 +1,4 @@
-"""Render the project log markdown to PDF using fpdf2 (pure Python, no system deps).
 
-The machine has pandoc but no PDF engine: no LaTeX, no wkhtmltopdf, no browser, and
-groff-base ships only the `man` macros (not `ms`), so the usual pandoc chains fail.
-fpdf2 needs nothing outside pip.
-
-Handles the subset of markdown the log actually uses: ATX headings, paragraphs with
-inline bold/code, bullet lists, fenced code blocks, pipe tables, and \\newpage.
-"""
 import re
 import sys
 from pathlib import Path

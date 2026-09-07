@@ -1,17 +1,4 @@
-"""Random-summary floor (runbook Phase 3.3).
 
-Assigns random importance scores, then runs the SAME KTS -> knapsack selection and
-the SAME F1 evaluation as DSNet. If a trained model barely beats this, the metric is
-being satisfied by the pipeline (shot segmentation + 15% length budget), not by the
-model -- which is exactly why the runbook makes rank correlation primary and F1
-secondary.
-
-The split files reference h5 datasets by paths relative to third_party/DSNet/src, so the
-working directory is changed there internally; the script itself can be run from anywhere.
-
-Usage:
-    python src/random_baseline.py --splits third_party/DSNet/splits/tvsum.yml
-"""
 import argparse
 import json
 import os

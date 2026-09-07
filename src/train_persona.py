@@ -1,43 +1,4 @@
-"""Train the query-conditioned student on persona labels (Phase 9).
 
-Reuses DSNet's anchor-free model and losses unchanged; the only additions are
-(a) query conditioning (Phase 8) and (b) an auxiliary frame-level loss.
-
-## How persona labels enter training
-
-DSNet does NOT regress `gtscore`. It converts it to a binary 15%-budget keyshot target
-(`get_keyshot_summ` -> `downsample_summ`) and trains focal / IoU / centreness losses on
-that. So a persona's `gtscore` changes WHICH shots become positives -- the existing
-pipeline consumes persona supervision correctly with no modification.
-
-The runbook asks for "MSE loss against the persona gtscore", which does not map onto a
-detection model as written. Instead the DSNet losses are kept and an auxiliary loss is
-added on `pred_cls` (anchor-free emits exactly one score per frame) against the persona
-`gtscore`. That is the quantity Phase 10 measures with rank correlation, so the auxiliary
-loss optimises the primary metric directly -- which is what runbook 9.2 is really after.
-
-  --loss mse         DSNet losses + MSE(pred_cls, gtscore)
-  --loss mse+rank    ... plus a pairwise ranking loss (Axis 2)
-  --loss none        DSNet losses only
-
-## Two traps this script avoids
-
-**Video-level splits, not pair-level.** Each video appears with up to 8 personas. A random
-split over (video, persona) pairs would put the same video in train and test, letting the
-model memorise per-video importance and score well while ignoring the query. Splits are
-therefore taken over VIDEOS, reusing DSNet's own 5 splits so numbers stay comparable with
-Phases 2-4.
-
-**Model selection must be persona-aware.** DSNet keeps the epoch with max F1 against
-`user_summary` -- the ORIGINAL human generic summary, identical for all personas of a
-video. Selecting on that while training on persona labels would systematically pick the
-epoch that best IGNORES the persona. Selection here uses mean Spearman between `pred_cls`
-and the held-out persona `gtscore`; generic F1 is still logged for reference.
-
-Usage:
-    python src/train_persona.py --dataset tvsum --loss mse+rank --qcond concat \
-                                --out models/persona_af_tvsum
-"""
 import argparse
 import json
 import logging
@@ -147,6 +108,24 @@ def norm01(x):
     return (x - lo) / (hi - lo) if hi > lo else torch.zeros_like(x)
 
 
+def contrastive_loss(pred, pos, negs, tau=0.1):
+    """InfoNCE over personas of the SAME video.
+
+    The other losses only say "match this target". Nothing in them penalises producing
+    near-identical scores for two different personas of the same video -- which is exactly
+    what the student was doing (alignment margin +0.0017 vs the teacher's +0.0104).
+
+    This pushes the prediction toward its OWN persona's label and away from the other
+    personas' labels for that same video. Similarity is centred cosine (i.e. Pearson),
+    so it is scale-free and matches the rank-based metric.
+    """
+    def cen(x):
+        return (x - x.mean()) / (x.std() + 1e-6)
+    p = cen(pred)
+    sims = torch.stack([(p * cen(t)).mean() for t in [pos] + list(negs)]) / tau
+    return -torch.log_softmax(sims, dim=0)[0]
+
+
 def pairwise_rank_loss(pred, target, n_pairs=512, margin=0.0, gen=None):
     """Penalise inversions: for target_i > target_j, want pred_i > pred_j."""
     n = pred.numel()
@@ -205,6 +184,11 @@ def train_split(args, split_idx, split, by_video, device):
     test_keys = set(video_keys_of(split["test_keys"]))
     tr = [s for v, ss in by_video.items() if v in train_keys for s in ss]
     te = [s for v, ss in by_video.items() if v in test_keys for s in ss]
+    # other personas' labels for the same video (training videos only -- a video is
+    # wholly in train or wholly in test, so this cannot leak across the split)
+    by_vid_train = {}
+    for s_ in tr:
+        by_vid_train.setdefault(s_.video, []).append(s_)
     if not tr or not te:
         return None
 
@@ -270,6 +254,15 @@ def train_split(args, split_idx, split, by_video, device):
                     rk = pairwise_rank_loss(pred_cls.view(-1), gt)
                     loss = loss + args.lambda_rank * rk
                     agg["rank"] += float(rk)
+                if args.lambda_contrast > 0:
+                    negs = [torch.from_numpy(o.gtscore).to(device)
+                            for o in by_vid_train.get(s.video, [])
+                            if o.persona != s.persona]
+                    if negs:
+                        ct = contrastive_loss(pred_cls.view(-1), gt,
+                                              [norm01(n) for n in negs], args.tau)
+                        loss = loss + args.lambda_contrast * ct
+                        agg["contrast"] += float(ct)
 
             opt.zero_grad(); loss.backward(); opt.step()
             agg["loss"] += float(loss); nb += 1
@@ -312,6 +305,9 @@ def main():
     ap.add_argument("--nms-thresh", type=float, default=0.4)
     ap.add_argument("--metric", default=None, choices=["avg", "max"],
                     help="annotator aggregation; DSNet uses avg for tvsum, max for summe")
+    ap.add_argument("--lambda-contrast", type=float, default=0.0,
+                    help="InfoNCE against other personas of the same video (0 = off)")
+    ap.add_argument("--tau", type=float, default=0.1, help="contrastive temperature")
     ap.add_argument("--qcond-lr-mult", type=float, default=1.0,
                     help="lr multiplier for the query conditioner (it starts at identity)")
     ap.add_argument("--seed", type=int, default=12345)

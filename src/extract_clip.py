@@ -1,26 +1,4 @@
-"""Re-extract frame features with CLIP, keeping the eccv16 h5 schema (Phase 4, step 2).
 
-Replaces ONLY `features` (GoogLeNet pool5, 1024-d) with CLIP image embeddings (512-d for
-ViT-B-32). `gtscore`, `change_points`, `picks`, `n_frames`, `n_steps`, `user_summary` and
-`gtsummary` are copied through untouched, so KTS, the knapsack selection and the whole
-evaluation harness keep working unchanged.
-
-Why CLIP: the persona query is encoded by CLIP's *text* encoder in Phase 8. CLIP is
-trained so image and text embeddings share one space, so query and frame become directly
-comparable. GoogLeNet has no such text counterpart.
-
-Frames are taken at the `picks` positions, which index the ORIGINAL video. Decoding is
-strictly sequential: frame-seek APIs (e.g. OpenCV's CAP_PROP_POS_FRAMES) can silently
-return a neighbouring frame on some codecs, which would misalign every feature with its
-label. Sequential decode is slower but exact.
-
-Requires data/video_map.json from src/map_videos.py (which verifies the key->file
-mapping; see that file for why that matters).
-
-Usage:
-    python src/extract_clip.py --dataset tvsum --out data/clip_h5
-    python src/extract_clip.py --dataset summe --out data/clip_h5
-"""
 import argparse
 import json
 import shutil
@@ -40,11 +18,7 @@ OUT_NAME = {"tvsum": "tvsum_clip.h5", "summe": "summe_clip.h5"}
 
 
 def read_frames_at(video_path, wanted):
-    """Decode sequentially, returning {frame_index: PIL.Image} for indices in `wanted`.
 
-    Only the requested frames are converted to RGB images; the rest are decoded and
-    discarded, which is the unavoidable cost of exact indexing.
-    """
     want = set(int(w) for w in wanted)
     last = max(want)
     out = {}

@@ -1,37 +1,4 @@
-"""Persona-sensitivity: the counterfactual test (Phase 11.2).
 
-Phase 10 showed that TVSum/SumMe ground truth is *generic*, so agreement metrics penalise
-a model for personalising. This test needs no per-persona ground truth: fix the video,
-change only the persona, and measure whether the SUMMARY changes.
-
-**Changing is not enough.** A model that perturbs its output randomly with the query would
-also "change". The scientific claim requires that divergence track persona MEANING:
-
-    semantically similar personas  -> similar summaries
-    semantically distant personas  -> different summaries
-
-so the headline number is the correlation between
-
-    persona distance   = 1 - cosine(query_emb_i, query_emb_j)     (CLIP text space,
-                                                                   the space the model
-                                                                   actually conditions on)
-    summary divergence = 1 - Jaccard(selected shots_i, selected shots_j)
-
-Divergence is computed on the ACTUAL selected shot sets -- the real KTS -> knapsack
-pipeline -- so this compares summaries, not raw scores.
-
-Three references are reported alongside:
-
-  teacher      -- divergence of the supervision itself (the realistic upper bound)
-  control      -- model trained on generic labels; it learned to ignore the query, so it
-                  should show ~0 divergence and ~0 correlation
-  shuffled-query -- the same model fed MISMATCHED persona embeddings. This separates
-                  "responds to this persona's meaning" from "responds to any vector".
-                  Not in the runbook, but without it a reviewer can ask exactly that.
-
-Usage:
-    python src/persona_sensitivity.py --out results/phase11/sensitivity.json
-"""
 import argparse
 import json
 import sys
@@ -149,7 +116,6 @@ def main():
 
     results = []
 
-    # --- reference 1: the TEACHER's own labels (upper bound) ---------------------
     tpairs = []
     for v, lst in samples.items():
         if len(lst) < 2:
@@ -157,7 +123,6 @@ def main():
         tpairs += pairs_for({pid: sc for pid, sc, _ in lst}, lst[0][2], Q)
     results.append(summarise("TEACHER labels (upper bound)", tpairs))
 
-    # --- models, evaluated only on each split's HELD-OUT videos ------------------
     for label, ckdir in (("Ours: persona+FiLM", ROOT / "models/p9_persona_film"),
                          ("Control: generic+FiLM", ROOT / "models/p9_generic_film")):
         allp = []
@@ -169,7 +134,6 @@ def main():
                     allp += pairs_for(per, samples[v][0][2], Q)
         results.append(summarise(label, allp))
 
-    # --- reference 2: SHUFFLED queries (does it respond to MEANING?) -------------
     pids = sorted(Q)
     perm = list(pids); rng.shuffle(perm)
     smap = dict(zip(pids, perm))
@@ -180,7 +144,6 @@ def main():
                              args.device, shuffle_map=smap)
         for v, per in preds.items():
             if len(per) >= 2:
-                # distance still measured with the TRUE persona embeddings
                 allp += pairs_for(per, samples[v][0][2], Q)
     results.append(summarise("Ours + SHUFFLED queries", allp))
 

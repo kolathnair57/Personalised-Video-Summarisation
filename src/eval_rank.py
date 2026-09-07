@@ -1,35 +1,4 @@
-"""Rank-correlation evaluation, Otani et al. (2019) protocol (Phase 10.1).
 
-Why this is the PRIMARY metric: Phase 3 measured a random-score model at 56.42 F1 on
-TVSum versus published DSNet's 62.09. F1 is dominated by KTS segmentation plus the 15%
-knapsack budget, so it largely measures the pipeline rather than the model. Rank
-correlation compares the predicted ORDERING against human orderings and has no such
-shortcut.
-
-## The protocol, and its asymmetry
-
-  TVSum : correlate the prediction against EACH annotator separately, then average the
-          correlations. TVSum ships 20 per-frame Likert (1-5) scores per video in
-          ydata-tvsum50-anno.tsv. (Verified: that file's length == n_frames, and the h5
-          gtscore is exactly its mean sampled at `picks`, Spearman 1.0000.)
-  SumMe : average the annotators FIRST, then correlate once. SumMe's annotations are
-          binary keyshot selections (15-18 users), so correlating against one user's
-          binary vector is noise-dominated; the mean is a selection frequency.
-
-Getting this backwards is the runbook's listed failure mode ("Rank correlation ~ 0 --
-protocol mismatch"), so it is implemented explicitly per dataset.
-
-## The two rows that make a number interpretable
-
-  random floor  : tau/rho ~ 0 by construction.
-  human ceiling : leave-one-annotator-out -- each annotator against the mean of the
-                  others, averaged. TVSum's inter-annotator agreement is famously low
-                  (~0.2), so a model at 0.15 is doing well, not badly. Reporting a model
-                  score without the ceiling is uninterpretable.
-
-Usage:
-    python src/eval_rank.py --dataset tvsum --out results/phase10/rank_tvsum.json
-"""
 import argparse
 import csv
 import json
@@ -138,12 +107,7 @@ def pred_generic_label(dataset, refs):
 
 def pred_dsnet(ckpt_dir, dataset, refs, num_feature, model_type="anchor-free",
                qcond=None, qcond_mode="film", personas=None, device="cuda"):
-    """Run a trained DSNet over every video; average over splits' checkpoints.
-
-    For a persona model, `personas` maps video -> list of query embeddings; each video is
-    scored under EVERY persona and all predictions are returned, so the protocol averages
-    over personas as well as annotators.
-    """
+  
     from modules.model_zoo import get_model
     from query_head import QueryConditioner
     h5p = CLIP[dataset] if num_feature == 512 else BASE[dataset]
